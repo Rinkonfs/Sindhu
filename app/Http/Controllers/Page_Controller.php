@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class mController extends Controller
+class Page_Controller extends Controller
 {
     public function index(){
         return view('home');
@@ -21,12 +21,6 @@ class mController extends Controller
     public function shop(){
         return view('pages/shop');
     }
-    public function login(){
-        return view('admin_pages/login');
-    }
-    public function adminLogin(){
-        return view('admin_pages/adminLogin');
-    }
     public function signup(){
         return view('pages/signup');
     }
@@ -35,5 +29,8 @@ class mController extends Controller
     }
     public function dashboard(){
         return view('pages/dashboard');
+    }
+    public function login(){
+        return view('admin_pages/login');
     }
 }

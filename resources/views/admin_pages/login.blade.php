@@ -144,7 +144,7 @@ body {
 </head>
 <body>
 
-<section class="form-holder">
+{{-- <section class="form-holder">
     <form class="login-form">
       <input type="text" placeholder="username" required />
       <input type="password" placeholder="password" required />
@@ -160,7 +160,7 @@ body {
       <p>mypassword</p>
     </div>
   </div>
-  <br>
+  <br> --}}
 </body>
 </html>
 

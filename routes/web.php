@@ -1,17 +1,22 @@
 <?php
 
-Route::get('/','mController@index');
-Route::get('/about','mController@about');
-Route::get('/cart','mController@cart');
-Route::get('/contact','mController@contact');
-Route::get('/shop','mController@shop');
-Route::get('/login','mController@login');
-Route::get('/clientel','mController@adminLogin');
-Route::get('/signup','mController@signup');
-Route::get('/checkout','mController@checkout');
-Route::get('/dashboard','mController@dashboard');
+//Frontend pages
+Route::get('/','Page_Controller@index');
+Route::get('/about','Page_Controller@about');
+Route::get('/cart','Page_Controller@cart');
+Route::get('/contact','Page_Controller@contact');
+Route::get('/shop','Page_Controller@shop');
+Route::get('/signup','Page_Controller@signup');
+Route::get('/checkout','Page_Controller@checkout');
+Route::get('/login','Page_Controller@login');
+Route::get('/dashboard','Page_Controller@dashboard');
+
+//Backend pages
+Route::get('/clientel','Admin_controller@adminLogin');
 
 
+
+//user account route
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
