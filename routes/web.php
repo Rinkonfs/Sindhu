@@ -13,7 +13,7 @@ Route::get('/dashboard','Page_Controller@dashboard');
 
 //Backend pages
 Route::get('/clientel','Admin_controller@adminLogin');
-
+Route::get('/adminDashboard','Admin_controller@adminDashboard');
 
 
 //user account route
