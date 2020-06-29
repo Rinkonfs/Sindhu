@@ -1,6 +1,6 @@
-    @include('inc/head')
-  </head>
- @include('inc/nav')
+@include('inc/head')
+
+@include('inc/nav')
     <div class="hero-wrap hero-bread" style="background-image: url('images/bg_6.jpg');">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -31,43 +31,43 @@
 						    <tbody>
 						      <tr class="text-center">
 						        <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
-						        
+
 						        <td class="image-prod"><div class="img" style="background-image:url(images/product-3.jpg);"></div></td>
-						        
+
 						        <td class="product-name">
 						        	<h3>Nike Free RN 2019 iD</h3>
 						        	<p>Far far away, behind the word mountains, far from the countries</p>
 						        </td>
-						        
+
 						        <td class="price">$4.90</td>
-						        
+
 						        <td class="quantity">
 						        	<div class="input-group mb-3">
 					             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
 					          	</div>
 					          </td>
-						        
+
 						        <td class="total">$4.90</td>
 						      </tr><!-- END TR-->
 
 						      <tr class="text-center">
 						        <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
-						        
+
 						        <td class="image-prod"><div class="img" style="background-image:url(images/product-4.jpg);"></div></td>
-						        
+
 						        <td class="product-name">
 						        	<h3>Nike Free RN 2019 iD</h3>
 						        	<p>Far far away, behind the word mountains, far from the countries</p>
 						        </td>
-						        
+
 						        <td class="price">$15.70</td>
-						        
+
 						        <td class="quantity">
 						        	<div class="input-group mb-3">
 					             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
 					          	</div>
 					          </td>
-						        
+
 						        <td class="total">$15.70</td>
 						      </tr><!-- END TR-->
 						    </tbody>
@@ -102,10 +102,10 @@
     		</div>
 			</div>
 		</section>
-		
+
 
   @include('inc/footer')
-  
+
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
@@ -118,19 +118,19 @@
 
 		var quantitiy=0;
 		   $('.quantity-right-plus').click(function(e){
-		        
+
 		        // Stop acting like a button
 		        e.preventDefault();
 		        // Get the field name
 		        var quantity = parseInt($('#quantity').val());
-		        
+
 		        // If is not undefined
-		            
+
 		            $('#quantity').val(quantity + 1);
 
-		          
+
 		            // Increment
-		        
+
 		    });
 
 		     $('.quantity-left-minus').click(function(e){
@@ -138,17 +138,14 @@
 		        e.preventDefault();
 		        // Get the field name
 		        var quantity = parseInt($('#quantity').val());
-		        
+
 		        // If is not undefined
-		      
+
 		            // Increment
 		            if(quantity>0){
 		            $('#quantity').val(quantity - 1);
 		            }
 		    });
-		    
+
 		});
 	</script>
-    
-  </body>
-</html>
