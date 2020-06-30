@@ -69,7 +69,11 @@
           <div class="mb-4">
             <p class="title">Minishop</p>
             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-            
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                  <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                  <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
           </div>
         </div>
         <div class="col-md">

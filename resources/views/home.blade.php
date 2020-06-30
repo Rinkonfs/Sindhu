@@ -1,7 +1,6 @@
-  @include('inc.head')
-</head>
-  @include('inc.nav')
+@extends('layouts.app')
 
+@section('content')
     <section id="home-section" class="hero">
 		  <div class="home-slider owl-carousel">
 	      <div class="slider-item js-fullheight">
@@ -15,7 +14,7 @@
 		          		<div class="horizontal">
 				            <h1 class="mb-4 mt-3">Shoes Collection 2019</h1>
 				            <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
-				            
+
 				          </div>
 		            </div>
 		          </div>
@@ -34,8 +33,8 @@
 		          		<div class="horizontal">
 				            <h1 class="mb-4 mt-3">New Shoes Winter Collection</h1>
 				            <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
-				            
-				            
+
+
 				          </div>
 		            </div>
 		          </div>
@@ -57,7 +56,7 @@
                 <h3 class="heading">Free Shipping</h3>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
               </div>
-            </div>      
+            </div>
           </div>
           <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services p-4 py-md-5">
@@ -68,7 +67,7 @@
                 <h3 class="heading">Support Customer</h3>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
               </div>
-            </div>    
+            </div>
           </div>
           <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services p-4 py-md-5">
@@ -79,7 +78,7 @@
                 <h3 class="heading">Secure Payments</h3>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
               </div>
-            </div>      
+            </div>
           </div>
         </div>
 			</div>
@@ -92,7 +91,7 @@
             <h2 class="mb-4">New Shoes Arrival</h2>
             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
           </div>
-        </div>   		
+        </div>
     	</div>
     	<div class="container">
     		<div class="row">
@@ -566,13 +565,4 @@
         </div>
       </div>
     </section>
-   @include('inc.footer')
-
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-@include('inc/scripts')
-    
-  </body>
-</html>
+@endsection

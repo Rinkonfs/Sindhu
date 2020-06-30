@@ -11,6 +11,7 @@ Route::get('/signup','mController@signup');
 Route::get('/checkout','mController@checkout');
 Route::get('/dashboard','mController@dashboard');
 
+Route::get( 'test', 'mController@test');
 
 Auth::routes();
 

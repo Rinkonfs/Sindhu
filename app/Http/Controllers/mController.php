@@ -36,4 +36,8 @@ class mController extends Controller
     public function dashboard(){
         return view('pages/dashboard');
     }
+
+    public function test(){
+        return view('pages.product-single');
+    }
 }

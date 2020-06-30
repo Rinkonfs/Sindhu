@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-@include('inc.head')
-</head>
-@include('inc.nav')
-    
+@extends('layouts.app')
+
+@section('content')
+
     <div class="hero-wrap hero-bread" style="background-image: url('images/bg_6.jpg');">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -41,7 +38,7 @@
 			    							</p>
 			    						</div>
 			    					</div>
-		    						<h3><a href="#">Nike Free RN 2019 iD</a></h3>
+		    						<h3><a href="test">Nike Free RN 2019 iD</a></h3>
 		    						<div class="pricing">
 			    						<p class="price"><span>$120.00</span></p>
 			    					</div>
@@ -73,7 +70,7 @@
 			    							</p>
 			    						</div>
 			    					</div>
-		    						<h3><a href="#">Nike Free RN 2019 iD</a></h3>
+		    						<h3><a href="test">Nike Free RN 2019 iD</a></h3>
 		  							<div class="pricing">
 			    						<p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
 			    					</div>
@@ -104,7 +101,7 @@
 			    							</p>
 			    						</div>
 			    					</div>
-		    						<h3><a href="#">Nike Free RN 2019 iD</a></h3>
+		    						<h3><a href="test">Nike Free RN 2019 iD</a></h3>
 		  							<div class="pricing">
 			    						<p class="price"><span>$120.00</span></p>
 			    					</div>
@@ -135,7 +132,7 @@
 			    							</p>
 			    						</div>
 			    					</div>
-		    						<h3><a href="#">Nike Free RN 2019 iD</a></h3>
+		    						<h3><a href="test">Nike Free RN 2019 iD</a></h3>
 		  							<div class="pricing">
 			    						<p class="price"><span>$120.00</span></p>
 			    					</div>
@@ -167,7 +164,7 @@
 			    							</p>
 			    						</div>
 			    					</div>
-		    						<h3><a href="#">Nike Free RN 2019 iD</a></h3>
+		    						<h3><a href="test">Nike Free RN 2019 iD</a></h3>
 		    						<div class="pricing">
 			    						<p class="price"><span>$120.00</span></p>
 			    					</div>
@@ -199,7 +196,7 @@
 			    							</p>
 			    						</div>
 			    					</div>
-		    						<h3><a href="#">Nike Free RN 2019 iD</a></h3>
+		    						<h3><a href="test">Nike Free RN 2019 iD</a></h3>
 		  							<div class="pricing">
 			    						<p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
 			    					</div>
@@ -230,7 +227,7 @@
 			    							</p>
 			    						</div>
 			    					</div>
-		    						<h3><a href="#">Nike Free RN 2019 iD</a></h3>
+		    						<h3><a href="test">Nike Free RN 2019 iD</a></h3>
 		  							<div class="pricing">
 			    						<p class="price"><span>$120.00</span></p>
 			    					</div>
@@ -419,11 +416,5 @@
     		</div>
     	</div>
     </section>
-    @include('inc/footer')
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-  @include('inc/scripts')
-    
-  </body>
-</html>
+@endsection
