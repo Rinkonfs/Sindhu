@@ -58,7 +58,7 @@ class LoginController extends Controller
             return redirect()->intended('/admin');
         }
         return back()->withInput($request->only('email', 'remember'));
-    }
+    } 
 
 
 }
