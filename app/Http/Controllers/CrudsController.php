@@ -81,7 +81,8 @@ class CrudsController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Crud::findOrFail($id);
+        return view ('view',compact('data'));
     }
 
     /**
@@ -92,7 +93,8 @@ class CrudsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Crud::findOrFail($id);
+        return view ('edit',compact('data'));
     }
 
     /**
@@ -104,7 +106,62 @@ class CrudsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $image_name = $request->hidden_immage;
+        $image = $request->file('image');
+        if($image != '')
+        {
+
+            $request->validate([
+
+                'productPrice'  => 'required',
+                'productColor'  => 'required',
+                'productSize'  => 'required',
+                'description'  => 'required',
+                'inStock'  => 'required',
+                'productName'  => 'required',
+                'image'   => 'required|image|max:2048'  
+    
+    
+            ]);
+
+            $image_name = rand() . '.' . $image -> getClientOriginalExtension();
+            $image->move(public_path('images'),$image_name);
+
+
+        }
+
+        else
+        {
+            $request->validate([
+
+                'productPrice'  => 'required',
+                'productColor'  => 'required',
+                'productSize'  => 'required',
+                'description'  => 'required',
+                'inStock'  => 'required',
+                'productName'  => 'required'
+                
+    
+            ]);
+
+        }
+
+        $form_data = array(
+
+            'productPrice'   => $request-> productPrice,
+            'productColor'   => $request-> productColor,
+            'productSize'   => $request-> productSize,
+            'description'   => $request-> description,
+            'inStock'       => $request-> inStock,
+            'productName'   => $request-> productName,
+            'image'         => $image_name
+
+        );
+
+        Crud::whereId($id)->update($form_data);
+        return redirect ('crud')->with('success','Data is successfully updated');
+
+
     }
 
     /**
@@ -115,6 +172,8 @@ class CrudsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Crud::findOrFail($id);
+        $data->delete();
+        return redirect ('crud')->with('success','Data successfully deleted!');
     }
 }

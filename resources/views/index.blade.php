@@ -31,6 +31,13 @@
    <td>{{ $row->description }}</td>
    <td>{{ $row->inStock }}</td>
    <td>
+   <a href= " {{ route ('crud.show', $row->id) }}" class="btn btn-primary">Show </a>
+   <a href= " {{ route ('crud.edit', $row->id) }}" class="btn btn-warning">Edit </a>
+   <form action = "{{ route ('crud.destroy', $row->id) }}" method="post">
+    @csrf
+    @method('DELETE')
+    <button type="submit" class="btn btn-danger">DELETE </button>
+
     
    </td>
   </tr>
