@@ -21,8 +21,8 @@ class CreateProductsTable extends Migration
             $table->double('price');
             $table->string('color');
             $table->string('size');
-            $table->json('images');
-            $table->boolean('stock');
+            $table->string('images');
+            $table->boolean('stock')->default(0);
             $table->timestamps();
         });
     }
