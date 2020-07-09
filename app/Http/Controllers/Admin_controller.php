@@ -11,6 +11,7 @@ class Admin_controller extends Controller
         return view('Backend_Pages/adminLogin');
     }
     public function adminDashboard(){
-        return view('Backend_Pages/adminDash');
-    }
+        return view('Backend_Pages/dashView');
+    } 
+   
 }
