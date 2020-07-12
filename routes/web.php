@@ -11,9 +11,9 @@ Route::get('/checkout','Page_Controller@checkout');
 Route::get('/login','Page_Controller@login');
 Route::get('/dashboard','Page_Controller@dashboard');
 
-//Backend pages
-Route::get('/clientel','Admin_controller@adminLogin');
-Route::get('/adminDashboard','Admin_controller@adminDashboard');
+// Backend pages
+// Route::get('/clientel','Admin_controller@adminLogin');
+Route::get('/adminDashboard','Admin_controller@adminDashboard')->middleware('isAdmin')->name('adminDashboard');
 
 
 //user account route
@@ -22,4 +22,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/crud','CrudsController');
+
+// admin controller
+
+// Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('isAdmin');
 
