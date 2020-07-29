@@ -10,44 +10,44 @@
   <div class="container-fluid px-0">
     <div class="row no-gutters">
       <div class="col-md-4 col-lg-2 ftco-animate">
-        <a href="images/gallery-1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/gallery-1.jpg);">
+        <a href="images/fb1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/thumb_fb1.jpg);">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
-            <span class="icon-instagram"></span>
+            <span class="icon-facebook"></span>
           </div>
         </a>
       </div>
       <div class="col-md-4 col-lg-2 ftco-animate">
-        <a href="images/gallery-2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/gallery-2.jpg);">
+        <a href="images/fb2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/thumb_fb2.jpg);">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
-            <span class="icon-instagram"></span>
+            <span class="icon-facebook"></span>
           </div>
         </a>
       </div>
       <div class="col-md-4 col-lg-2 ftco-animate">
-        <a href="images/gallery-3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/gallery-3.jpg);">
+        <a href="images/fb3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/thumb_fb3.jpg);">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
-            <span class="icon-instagram"></span>
+            <span class="icon-facebook"></span>
           </div>
         </a>
       </div>
       <div class="col-md-4 col-lg-2 ftco-animate">
-        <a href="images/gallery-4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/gallery-4.jpg);">
+        <a href="images/fb4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/thumb_fb4.jpg);">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
-            <span class="icon-instagram"></span>
+            <span class="icon-facebook"></span>
           </div>
         </a>
       </div>
       <div class="col-md-4 col-lg-2 ftco-animate">
-        <a href="images/gallery-5.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/gallery-5.jpg);">
+        <a href="images/fb5.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/thumb_fb5.jpg);">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
-            <span class="icon-instagram"></span>
+            <span class="icon-facebook"></span>
           </div>
         </a>
       </div>
       <div class="col-md-4 col-lg-2 ftco-animate">
-        <a href="images/gallery-6.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/gallery-6.jpg);">
+        <a href="images/fb6.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/thumb_fb6.jpg);">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
-            <span class="icon-instagram"></span>
+            <span class="icon-facebook"></span>
           </div>
         </a>
       </div>
@@ -67,8 +67,8 @@
       <div class="row mb-5">
         <div class="col-md">
           <div class="mb-4">
-            <p class="title">Minishop</p>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+            <p class="title">Sindhu Store</p>
+            <p>আম্মুর শাড়ী আর দিদির ওড়না দিয়ে শাড়ী পরার গল্পটা শুরু...এমন শাড়ীপাগল ললনাদের জন্যই এই আয়োজন...</p>
             
           </div>
         </div>
@@ -101,13 +101,14 @@
             <p class="title">Have a Questions?</p>
               <div class="block-23 mb-3">
                 <ul>
-                  <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                  <li><a href="tel:+8801719515311"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-                  <li><a href="mail:info@shindhustore.com"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                  <li><span class="icon icon-map-marker"></span><span class="text">We are an online store</span></li>
+                  <li><a href="tel:+8801766-598447"><span class="icon icon-phone"></span><span class="text">+880 1766-598447</span></a></li>
+                  <li><a href="mail:info@shindhustore.com"><span class="icon icon-envelope"></span><span class="text">info@shindhustore.com</span></a></li>
                 </ul>
               </div>
           </div>
         </div>
-       <div style="width:100%;padding:10px;"><span style="float:left;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved Sindhu Store</span><span style="float:right;"> Developed By <a href="//www.ecarnivalbd.com/">eCarnivalBD </a></span></div>
+       <div style="width:100%;padding:10px;"><span style="float:left;">Copyright &copy;<script>document.write(new Date().getFullYear());
+       </script> All rights reserved Sindhu Store</span><span style="float:right;">Developed By <a target="_blank" style="color:white;" href="//www.ecarnivalbd.com/">e<span style="color:red">C</span>arnival<span style="color:red">BD</span> Limited</a></span></div>
       </div>
   </footer>

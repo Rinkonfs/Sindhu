@@ -5,7 +5,7 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Cart</span></p>
+          	<p class="breadcrumbs"><span class="mr-2"><a href="{{ URL::to('home') }}">Home</a></span> <span>Cart</span></p>
             <h1 class="mb-0 bread">Shopping Cart</h1>
           </div>
         </div>
@@ -42,11 +42,11 @@
 									<tr class="text-center">
 										
 										{{-- <td class="product-remove"><a href="#"><span class="ion-ios-close  remove-from-cart" data-id="{{ $id }}"></span></a></td> --}}
-										<td class="product-remove"><button class="btn btn-danger btn-sm remove-from-cart" data-id="{{ $id }}"><i class="ion-ios-close"></i></button></td>
-
+										{{-- <td class="product-remove"><button class="btn btn-danger btn-sm remove-from-cart" data-id="{{ $id }}"><i class="ion-ios-close"></i></button></td> --}}
+										<td class="product-remove"><a href="#" class="remove-from-cart" data-id="{{ $id }}"><i class="ion-ios-close"></i></a></td>	
 										<td class="image-prod">
 											<div>
-												<img class="img" src="{{url('/images/'.$details['photo'])}}" alt="Product Image">
+												<img class="responsive" width="100px" height="auto" src="{{url('/images/'.$details['photo'])}}" alt="{{ $details['name'] }}" >
 											</div>
 										</td>
 										
@@ -55,7 +55,7 @@
 											<p>{{ $details['description'] }}</p>
 										</td>
 										
-										<td class="price">{{ $details['price'] }}</td>
+										<td class="price">&#2547;{{ $details['price'] }}</td>
 										
 										<td class="quantity">
 											<div class="input-group mb-3">
@@ -63,7 +63,7 @@
 											</div>
 										</td>
 										
-										<td class="total">Tk. {{ $details['price'] * $details['quantity'] }}</td>
+										<td class="total">&#2547;{{ $details['price'] * $details['quantity'] }}</td>
 									  </tr><!-- END TR-->
 
 									  
@@ -81,20 +81,20 @@
 									<h3>Cart Totals</h3>
 									<p class="d-flex">
 										<span>Subtotal</span>
-									<span>Tk. {{ $total }}</span>
+									<span>&#2547;{{ $total }}</span>
 									</p>
 									<p class="d-flex">
 										<span>Delivery</span>
-										<span>$0.00</span>
+										<span>&#2547;0.00</span>
 									</p>
 									<p class="d-flex">
 										<span>Discount</span>
-										<span>$0.00</span>
+										<span>&#2547;0.00</span>
 									</p>
 									<hr>
 									<p class="d-flex total-price">
 										<span>Total</span>
-										<span>Tk. {{ $total }}</span>
+										<span>&#2547;{{ $total }}</span>
 									</p>
 								</div>
 								<p class="text-center"><a href="{{ route('users.products.checkout') }}" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
