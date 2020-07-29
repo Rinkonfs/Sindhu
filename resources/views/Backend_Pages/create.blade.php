@@ -63,7 +63,7 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Product Category </label>
                 <div  class="col-sm-10">    
-                    <select type="text" name="pCategory" class="form-control input-lg" required>
+                    <select type="text" name="category" class="form-control input-lg" required>
                         <option selected disabled>Select Category</option>
                         <option value="Hand Loom">Hand Loom</option>
                         <option value="Sharee">Saree</option>
