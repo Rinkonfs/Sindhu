@@ -1,4 +1,8 @@
+<<<<<<< HEAD
   @include('inc.head')
+=======
+@include('inc.head')
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
 </head>
   @include('inc.nav')
 
@@ -27,7 +31,11 @@
 	      	<div class="overlay"></div>
 	        <div class="container-fluid p-0">
 	          <div class="row d-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
+<<<<<<< HEAD
 	          	<img class="one-third order-md-last img-fluid" src="images/bg_2.png" alt="">
+=======
+	          	<img class="one-third order-md-last img-fluid" src="images/cbg_1.png" alt="">
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
 		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 		          	<div class="text">
 		          		<span class="subheading">#New Arrival</span>
@@ -98,7 +106,11 @@
     		<div class="row">
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product d-flex flex-column">
+<<<<<<< HEAD
     					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-1.png" alt="Colorlib Template">
+=======
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/1.jpg" alt="Colorlib Template">
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
     					</a>
     					<div class="text py-3 pb-4 px-3">
     						<div class="d-flex">
@@ -110,16 +122,24 @@
     						<div class="pricing">
 	    						<p class="price"><span>BDT 	&#x9f3;1500</span></p>
 	    					</div>
+<<<<<<< HEAD
 	    					{{-- <p class="bottom-area d-flex px-3">
     							<a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
     							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
     						</p> --}}
+=======
+	    					
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
     					</div>
     				</div>
     			</div>
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product d-flex flex-column">
+<<<<<<< HEAD
     					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-2.png" alt="Colorlib Template">
+=======
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/2.jpg" alt="Colorlib Template">
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
     						{{-- <span class="status">50% Off</span> --}}
     						<div class="overlay"></div>
     					</a>
@@ -128,6 +148,7 @@
     							<div class="cat">
 		    						<span>Hand Loom</span>
 		    					</div>
+<<<<<<< HEAD
 		    					{{-- <div class="rating">
 	    							<p class="text-right mb-0">
 	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
@@ -137,11 +158,15 @@
 	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
 	    							</p>
 	    						</div> --}}
+=======
+		    				
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
 	    					</div>
 							<h3><a href="#">Megh Boleche Jabo Jabo</a></h3>
 							<div class="pricing">
 	    						<p class="price"><span>BDT &#x9f3;1500</span></p>
 	    					</div>
+<<<<<<< HEAD
   							{{-- <div class="pricing">
 	    						<p class="price"><span class="mr-2 price-dc">BDT 120.00</span><span class="price-sale">BDT 80.00</span></p>
 	    					</div>
@@ -150,11 +175,18 @@
     							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
     						</p> --}}
     					</div>
+=======
+  						</div>
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
     				</div>
     			</div>
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product">
+<<<<<<< HEAD
     					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-3.png" alt="Colorlib Template">
+=======
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/3.jpg" alt="Colorlib Template">
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
 	    					<div class="overlay"></div>
 	    				</a>
     					<div class="text py-3 pb-4 px-3">
@@ -162,6 +194,7 @@
     							<div class="cat">
 		    						<span>Hand Loom</span>
 		    					</div>
+<<<<<<< HEAD
 		    					{{-- <div class="rating">
 	    							<p class="text-right mb-0">
 	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
@@ -172,20 +205,31 @@
 	    							</p>
 	    						</div> --}}
 	    					</div>
+=======
+		    				</div>
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
     						<h3><a href="#">Cha Bilash</a></h3>
   							<div class="pricing">
 	    						<p class="price"><span>BDT &#x9f3;1500</span></p>
 	    					</div>
+<<<<<<< HEAD
 	    					{{-- <p class="bottom-area d-flex px-3">
     							<a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
     							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
     						</p> --}}
+=======
+	    					
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
     					</div>
     				</div>
     			</div>
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product">
+<<<<<<< HEAD
     					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-4.png" alt="Colorlib Template">
+=======
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/4.jpg" alt="Colorlib Template">
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3">
@@ -193,6 +237,7 @@
     							<div class="cat">
 		    						<span>Hand Loom</span>
 		    					</div>
+<<<<<<< HEAD
 		    					{{-- <div class="rating">
 	    							<p class="text-right mb-0">
 	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
@@ -202,22 +247,33 @@
 	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
 	    							</p>
 	    						</div> --}}
+=======
+		    					
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
 	    					</div>
     						<h3><a href="#">Khachar Vitor Ochin Pakhi</a></h3>
   							<div class="pricing">
 	    						<p class="price"><span>BDT  &#x9f3;1500</span></p>
 	    					</div>
+<<<<<<< HEAD
 	    					{{-- <p class="bottom-area d-flex px-3">
     							<a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
     							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
     						</p> --}}
+=======
+	    					
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
     					</div>
     				</div>
     			</div>
 
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product d-flex flex-column">
+<<<<<<< HEAD
     					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-5.png" alt="Colorlib Template">
+=======
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/5.jpg" alt="Colorlib Template">
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3">
@@ -225,6 +281,7 @@
     							<div class="cat">
 		    						<span>Hand Loom</span>
 		    					</div>
+<<<<<<< HEAD
 		    					{{-- <div class="rating">
 	    							<p class="text-right mb-0">
 	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
@@ -235,21 +292,33 @@
 	    							</p>
 	    						</div> --}}
 	    					</div>
+=======
+		    				</div>
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
     						<h3><a href="#">Holudiya Pakhi</a></h3>
     						<div class="pricing">
 	    						<p class="price"><span>BDT  &#x9f3;1500</span></p>
 	    					</div>
+<<<<<<< HEAD
 	    					{{-- <p class="bottom-area d-flex px-3">
     							<a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
     							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
     						</p> --}}
+=======
+	    				
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
     					</div>
     				</div>
     			</div>
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product d-flex flex-column">
+<<<<<<< HEAD
     					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-6.png" alt="Colorlib Template">
     						{{-- <span class="status">50% Off</span> --}}
+=======
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/6.jpg" alt="Colorlib Template">
+    					
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3">
@@ -257,6 +326,7 @@
     							<div class="cat">
 		    						<span>Hand Loom</span>
 		    					</div>
+<<<<<<< HEAD
 		    					{{-- <div class="rating">
 	    							<p class="text-right mb-0">
 	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
@@ -266,11 +336,15 @@
 	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
 	    							</p>
 	    						</div> --}}
+=======
+		    					
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
 	    					</div>
 							<h3><a href="#">Himu-Rupa</a></h3>
 							<div class="pricing">
 	    						<p class="price"><span>BDT  &#x9f3;1500</span></p>
 	    					</div>
+<<<<<<< HEAD
   							{{--<div class="pricing">
 	    						<p class="price"><span class="mr-2 price-dc">BDT 120.00</span><span class="price-sale">BDT 80.00</span></p>
 	    					</div>
@@ -278,12 +352,19 @@
     							<a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
     							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
     						</p> --}}
+=======
+  						
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
     					</div>
     				</div>
     			</div>
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product">
+<<<<<<< HEAD
     					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-7.png" alt="Colorlib Template">
+=======
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/7.jpg" alt="Colorlib Template">
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
 	    					<div class="overlay"></div>
 	    				</a>
     					<div class="text py-3 pb-4 px-3">
@@ -291,6 +372,7 @@
     							<div class="cat">
 		    						<span>Hand Loom</span>
 		    					</div>
+<<<<<<< HEAD
 		    					{{-- <div class="rating">
 	    							<p class="text-right mb-0">
 	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
@@ -300,21 +382,32 @@
 	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
 	    							</p>
 	    						</div> --}}
+=======
+		    				
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
 	    					</div>
     						<h3><a href="#">Jamdani Kothon</a></h3>
   							<div class="pricing">
 	    						<p class="price"><span>BDT  &#x9f3;1500</span></p>
 	    					</div>
+<<<<<<< HEAD
 	    					{{-- <p class="bottom-area d-flex px-3">
     							<a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
     							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
     						</p> --}}
+=======
+	    				
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
     					</div>
     				</div>
     			</div>
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product">
+<<<<<<< HEAD
     					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-8.png" alt="Colorlib Template">
+=======
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/8.jpg" alt="Colorlib Template">
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3">
@@ -322,6 +415,7 @@
     							<div class="cat">
 		    						<span>Hand Loom</span>
 		    					</div>
+<<<<<<< HEAD
 		    					{{-- <div class="rating">
 	    							<p class="text-right mb-0">
 	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
@@ -331,15 +425,22 @@
 	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
 	    							</p>
 	    						</div> --}}
+=======
+		    				
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
 	    					</div>
     						<h3><a href="#">আলতার গল্প</a></h3>
   							<div class="pricing">
 	    						<p class="price"><span>BDT  &#x9f3;1500</span></p>
 	    					</div>
+<<<<<<< HEAD
 	    					{{-- <p class="bottom-area d-flex px-3">
     							<a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
     							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
     						</p> --}}
+=======
+	    				
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
     					</div>
     				</div>
     			</div>
@@ -571,4 +672,43 @@
 @include('inc/scripts')
     
   </body>
+<<<<<<< HEAD
 </html>
+=======
+</html> <script>
+		$(document).ready(function(){
+
+		var quantitiy=0;
+		   $('.quantity-right-plus').click(function(e){
+
+		        // Stop acting like a button
+		        e.preventDefault();
+		        // Get the field name
+		        var quantity = parseInt($('#quantity').val());
+
+		        // If is not undefined
+
+		            $('#quantity').val(quantity + 1);
+
+
+		            // Increment
+
+		    });
+
+		     $('.quantity-left-minus').click(function(e){
+		        // Stop acting like a button
+		        e.preventDefault();
+		        // Get the field name
+		        var quantity = parseInt($('#quantity').val());
+
+		        // If is not undefined
+
+		            // Increment
+		            if(quantity>0){
+		            $('#quantity').val(quantity - 1);
+		            }
+		    });
+
+		});
+	</script>
+>>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d

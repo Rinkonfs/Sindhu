@@ -44,6 +44,7 @@ class CrudsController extends Controller
             'productSize'  => 'required',
             'description'  => 'required',
             'inStock'  => 'required',
+            'category'  => 'required',
             'productName'  => 'required',
             'image'   => 'required|image|max:2048'  
 
@@ -63,6 +64,7 @@ class CrudsController extends Controller
             'productSize'   => $request-> productSize,
             'description'   => $request-> description,
             'inStock'       => $request-> inStock,
+            'category'       => $request-> category,
             'productName'   => $request-> productName,
             'image'         => $new_name
 
@@ -118,6 +120,7 @@ class CrudsController extends Controller
                 'productSize'  => 'required',
                 'description'  => 'required',
                 'inStock'  => 'required',
+                'category'  => 'required',
                 'productName'  => 'required',
                 'image'   => 'required|image|max:2048'  
     
@@ -138,6 +141,7 @@ class CrudsController extends Controller
                 'productColor'  => 'required',
                 'productSize'  => 'required',
                 'description'  => 'required',
+                'category'  => 'required',
                 'inStock'  => 'required',
                 'productName'  => 'required'
                 
@@ -153,6 +157,7 @@ class CrudsController extends Controller
             'productSize'   => $request-> productSize,
             'description'   => $request-> description,
             'inStock'       => $request-> inStock,
+            'category'       => $request-> category,
             'productName'   => $request-> productName,
             'image'         => $image_name
 

@@ -12,9 +12,7 @@ class Page_Controller extends Controller
     public function about(){
         return view('pages/about');
     }
-    public function cart(){
-        return view('pages/cart');
-    }
+    
     public function contact(){
         return view('pages/contact');
     }
@@ -24,9 +22,7 @@ class Page_Controller extends Controller
     public function signup(){
         return view('pages/signup');
     }
-    public function checkout(){
-        return view('pages/checkout');
-    }
+    
     public function dashboard(){
         return view('pages/dashboard');
     }
