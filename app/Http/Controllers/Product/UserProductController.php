@@ -11,7 +11,7 @@ class UserProductController extends Controller
 {
     public function index()
     {
-        $products = Crud::paginate(5);
+        $products = Crud::paginate(6);
 
 
         return view('pages.shop', compact('products'));

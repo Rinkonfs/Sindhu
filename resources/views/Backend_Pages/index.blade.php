@@ -22,10 +22,10 @@
                         <tr>
                             <th>Image</th>
                             <th>Product Name</th>
-                            <th>Price</th>
+                            <th>Price(BDT)</th>
                             <th>Color</th>
                             <th>Size</th>
-                            <th>Description</th>
+                            <th>Category</th>
                             <th>Stock</th>
                             <th>Actions</th>
                         </tr>
@@ -34,10 +34,10 @@
                         <tr>
                             <th>Image</th>
                             <th>Product Name</th>
-                            <th>Price</th>
+                            <th>Price(BDT)</th>
                             <th>Color</th>
                             <th>Size</th>
-                            <th>Description</th>
+                            <th>Category</th>
                             <th>Stock</th>
                             <th>Actions</th>
                         </tr>
@@ -56,10 +56,10 @@
                         <tr>
                         <td><img src="{{ URL::to('/') }}/images/{{ $row->image }}" class="img-thumbnail" width="75" /></td>
                         <td>{{ $row->productName }}</td>
-                        <td>{{ $row->productPrice }}</td>
-                        <td>{{ $row->productColor }}</td>
+                        <td>&#2547;{{ $row->productPrice }}</td>
+                        <td><div style="display:inline-block;margin-top:10px;background:{{ $row->productColor }};width:20px;height:20px;border-radius:5px;border:2px solid black;" title="{{ $row->productColor }}"></div></td>
                         <td>{{ $row->productSize }}</td>
-                        <td>{{ $row->description }}</td>
+                        <td>{{ $row->category }}</td>
                         <td>{{ $row->inStock }}</td>
                         <td>
                         <a href= " {{ route ('crud.show', $row->id) }}" class="btn btn-info"><i class="fas fa-eye"></i> </a>

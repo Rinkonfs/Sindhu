@@ -107,6 +107,12 @@
             <i class="fas fa-shopping-bag"></i>
             <span>Product</span></a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('crud.index') }}">
+            <i class="fas fa-clipboard-list"></i>
+            <span>Order</span>
+          </a>
+        </li>
         {{-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>
@@ -135,6 +141,7 @@
         </li> --}}
       </ul>
       <br>
+      <!-- Section Yeild Starts Here -->
       <div id="content-wrapper">
           @yield('dashView')
       </div>
@@ -171,8 +178,21 @@
           </div>
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+            @if (session('status'))
+            <div class="alert alert-success" role="alert">
+                {{ session('status') }}
+            </div>
+          @endif
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                  <a  class="btn btn-primary"
+                      href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                      document.getElementById('logout-form').submit();">
+                      {{ __('Logout') }}
+                  </a> 
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+            </form>
           </div>
         </div>
       </div>

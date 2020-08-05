@@ -49,6 +49,12 @@
                 </div>
             </div>
             <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Category</label>
+                <div class="col-sm-10">
+                    <input type="text" name="category" value="{{ $data->category }}" class="form-control input-lg" />
+                </div>
+            </div>
+            <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Size</label>
                 <div class="col-sm-10">
                     <input type="text" name="productSize" value="{{ $data->productSize }}" class="form-control input-lg" />

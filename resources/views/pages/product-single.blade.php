@@ -1,11 +1,11 @@
 @include('inc.head')
-</head>
-  <body class="goto-here">
+
+<body class="goto-here">
 
   @include('inc.nav')
 
 
-    <div class="hero-wrap hero-bread" style="background-image: url('images/bg_6.jpg');">
+    <div class="hero-wrap hero-bread" style="background-image: url({{url('images/bg_6.jpg')}});">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
@@ -20,7 +20,9 @@
     	<div class="container">
     		<div class="row">
     			<div class="col-lg-6 mb-5 ftco-animate">
-    				<a href="{{url('/images/'.$crud->image)}}" class="image-popup prod-img-bg"><img src="{{url('/images/'.$crud->image)}}" class="img-fluid" alt="Colorlib Template"></a>
+					<a href="{{url('/images/'.$crud->image)}}" class="image-popup prod-img-bg">
+						<img src="{{url('/images/'.$crud->image)}}" class="img-fluid" alt="Sindhu Product">
+					</a>
     			</div>
     			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
     				<h3>{{  $crud->productName }}</h3>

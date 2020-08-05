@@ -1,6 +1,6 @@
-    @include('inc/head')
-  </head>
- @include('inc/nav')
+@include('inc/head')
+<body>
+@include('inc/nav')
     <div class="hero-wrap hero-bread" style="background-image: url('images/bg_6.jpg');">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -43,7 +43,7 @@
 										
 										{{-- <td class="product-remove"><a href="#"><span class="ion-ios-close  remove-from-cart" data-id="{{ $id }}"></span></a></td> --}}
 										{{-- <td class="product-remove"><button class="btn btn-danger btn-sm remove-from-cart" data-id="{{ $id }}"><i class="ion-ios-close"></i></button></td> --}}
-										<td class="product-remove"><a href="#" class="remove-from-cart" data-id="{{ $id }}"><i class="ion-ios-close"></i></a></td>	
+										<td class="product-remove"><a href="#" class="remove-from-cart" data-id="{{ $id }}"><i style="color:white" class="icon-close"></i></a></td>	
 										<td class="image-prod">
 											<div>
 												<img class="responsive" width="100px" height="auto" src="{{url('/images/'.$details['photo'])}}" alt="{{ $details['name'] }}" >
@@ -120,7 +120,27 @@
   
 
   <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+	<div id="ftco-loader" class="show fullscreen">
+		<svg	class="circular"
+				width="48px"
+				height="48px">
+					<circle	class="path-bg"
+							cx="24"
+							cy="24"
+							r="22"
+							fill="none"
+							stroke-width="4"
+							stroke="#eeeeee"/>
+					<circle class="path"
+							cx="24"
+							cy="24"
+							r="22"
+							fill="none"
+							stroke-width="4"
+							stroke-miterlimit="10"
+							stroke="#F96D00"/>
+		</svg>
+	</div>
 
 
   @include('inc/scripts')

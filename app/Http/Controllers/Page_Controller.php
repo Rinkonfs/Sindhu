@@ -29,4 +29,8 @@ class Page_Controller extends Controller
     public function login(){
         return view('admin_pages/login');
     }
+    public function customOrder(){
+        return view('pages/customOrder');
+    }
+    
 }

@@ -14,9 +14,9 @@ class CrudsController extends Controller
      */
     public function index()
     {
-            $data = Crud::latest()->paginate(5);
+            $data = Crud::latest()->paginate(10);
             return view('Backend_Pages.index',compact('data'))
-                ->with('i',(request()->input('page',1)-1)*5);
+                ->with('i',(request()->input('page',1)-1)*10);
     }
 
     /**

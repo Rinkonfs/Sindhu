@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
 @include('inc.head')
-</head>
+<body>
 @include('inc.nav')
     <div class="hero-wrap hero-bread" style="background-image: url('images/bg_6.jpg');">
       <div class="container">
@@ -24,13 +21,19 @@
                         @foreach($products as $product)
                             <div class="col-sm-12 col-md-12 col-lg-4 ftco-animate d-flex">
                                 <div class="product d-flex flex-column">
-                                    <a href="{{ route('users.products.show', $product->id) }}" class="img-prod"><img class="img-fluid" src="{{url('/images/'.$product->image)}}" alt="Colorlib Template">
-                                        <div class="overlay"></div>
+                                    <a  href="{{ route('users.products.show', $product->id) }}"
+                                        class="img-prod">
+                                            <img    class="img-fluid"
+                                                    src="{{url('/images/'.$product->image)}}"
+                                                    alt="Sindhu Product Image">
+                                            
+                                            <div    class="overlay">
+                                            </div>
                                     </a>
                                     <div class="text py-3 pb-4 px-3">
                                         <div class="d-flex">
                                             <div class="cat">
-                                                <span>Lifestyle</span>
+                                                <span>Hand Loom</span>
                                             </div>
                                             <div class="rating">
                                                 <p class="text-right mb-0">
@@ -42,18 +45,27 @@
                                                 </p>
                                             </div>
                                         </div>
-                                        <h3><a href="{{ route('users.products.show', $product->id) }}">{{ $product->productName }}</a></h3>
+                                        <h3>
+                                            <a href="{{ route('users.products.show', $product->id) }}">
+                                                {{ $product->productName }}
+                                            </a>
+                                        </h3>
                                         <div class="pricing">
-                                            <p class="price"><span>Tk. {{ $product->productPrice }}</span></p>
+                                            <p class="price">
+                                                <span>
+                                                    Tk. {{ $product->productPrice }}
+                                                </span>
+                                            </p>
                                         </div>
                                         <p class="bottom-area d-flex px-3">
-                                            <a href="{{ route('users.products.add-to-cart', $product->id) }}" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-                                            <a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+                                            <a  style="margin-bottom:100px;" 
+                                                href="{{ route('users.products.add-to-cart', $product->id) }}"
+                                                class="add-to-cart text-center py-2 mr-1">
+                                                    <span>Add to cart <i class="icon-add"></i></span></a>
                                         </p>
                                     </div>
                                 </div>
                             </div>
-
                         @endforeach
 
                     </div>
@@ -128,20 +140,23 @@
                      <div class="panel panel-default">
                          <div class="panel-heading" role="tab" id="headingOne">
                              <h4 class="panel-title">
-                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Men's Shoes
-                                 </a>
+                                <a  data-toggle="collapse"
+                                    data-parent="#accordion"
+                                    href="#collapseOne"
+                                    aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                        Sharee
+                                </a>
                              </h4>
                          </div>
                          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                              <div class="panel-body">
                                  <ul>
-                                 	<li><a href="#">Sport</a></li>
-                                 	<li><a href="#">Casual</a></li>
-                                 	<li><a href="#">Running</a></li>
-                                 	<li><a href="#">Jordan</a></li>
-                                 	<li><a href="#">Soccer</a></li>
-                                 	<li><a href="#">Football</a></li>
-                                 	<li><a href="#">Lifestyle</a></li>
+                                 	<li><a href="#">Hand Loom</a></li>
+                                 	<li><a onclick="notice()" href="#">Silk</a></li>
+                                 	<li><a onclick="notice()" href="#">Cotton</a></li>
+                                 	<li><a onclick="notice()" href="#">Jorjet</a></li>
+                                 	<li><a onclick="notice()" href="#">Tant</a></li>
                                  </ul>
                              </div>
                          </div>
@@ -149,20 +164,16 @@
                      <div class="panel panel-default">
                          <div class="panel-heading" role="tab" id="headingTwo">
                              <h4 class="panel-title">
-                                 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Women's Shoes
+                                 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">3 Piece
                                  </a>
                              </h4>
                          </div>
                          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                              <div class="panel-body">
                                 <ul>
-                                 	<li><a href="#">Sport</a></li>
-                                 	<li><a href="#">Casual</a></li>
-                                 	<li><a href="#">Running</a></li>
-                                 	<li><a href="#">Jordan</a></li>
-                                 	<li><a href="#">Soccer</a></li>
-                                 	<li><a href="#">Football</a></li>
-                                 	<li><a href="#">Lifestyle</a></li>
+                                    <li><a onclick="notice()" href="#">Indian Collection</a></li>
+                                    <li><a onclick="notice()" href="#">Cotton Collection</a></li>
+                                    <li><a onclick="notice()" href="#">Custom Desgin</a></li>
                                 </ul>
                              </div>
                          </div>
@@ -170,17 +181,15 @@
                      <div class="panel panel-default">
                          <div class="panel-heading" role="tab" id="headingThree">
                              <h4 class="panel-title">
-                                 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Accessories
+                                 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Cloth Bag
                                  </a>
                              </h4>
                          </div>
                          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                              <div class="panel-body">
                                 <ul>
-                                 	<li><a href="#">Jeans</a></li>
-                                 	<li><a href="#">T-Shirt</a></li>
-                                 	<li><a href="#">Jacket</a></li>
-                                 	<li><a href="#">Shoes</a></li>
+                                 	<li><a onclick="notice()" href="#">Coming Soon</a></li>
+                                 	
                                  </ul>
                              </div>
                          </div>
@@ -188,17 +197,20 @@
                      <div class="panel panel-default">
                          <div class="panel-heading" role="tab" id="headingFour">
                              <h4 class="panel-title">
-                                 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">Clothing
+                                <a  class="collapsed"
+                                    data-toggle="collapse"
+                                    data-parent="#accordion"
+                                    href="#collapseFour"
+                                    aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                        Assessories
                                  </a>
                              </h4>
                          </div>
                          <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                              <div class="panel-body">
                                 <ul>
-                                 	<li><a href="#">Jeans</a></li>
-                                 	<li><a href="#">T-Shirt</a></li>
-                                 	<li><a href="#">Jacket</a></li>
-                                 	<li><a href="#">Shoes</a></li>
+                                 	<li><a onclick="notice()" href="#">Coming Soon</a></li>
                                  </ul>
                              </div>
                          </div>
@@ -249,10 +261,38 @@
     	</div>
     </section>
     @include('inc/footer')
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <!-- LOADER -->
+    <div  id="ftco-loader"
+        class="show fullscreen">
+            <svg    class="circular"
+                    width="48px"
+                    height="48px">
+                        <circle class="path-bg"
+                                cx="24"
+                                cy="24"
+                                r="22"
+                                fill="none"
+                                stroke-width="4"
+                                stroke="#eeeeee"/>
+                        <circle class="path"
+                                cx="24"
+                                cy="24"
+                                r="22"
+                                fill="none"
+                                stroke-width="4"
+                                stroke-miterlimit="10"
+                                stroke="#F96D00"/>
+            </svg>
+    </div>
 
   @include('inc/scripts')
+  <script>
+      function notice(){
+        alert("Sorry,there is no product yet in this category");
+
+      }
+  </script>
 
   </body>
 </html>

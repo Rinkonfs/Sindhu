@@ -10,42 +10,42 @@
   <div class="container-fluid px-0">
     <div class="row no-gutters">
       <div class="col-md-4 col-lg-2 ftco-animate">
-        <a href="images/fb1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/thumb_fb1.jpg);">
+        <a href="{{url('images/fb1.jpg')}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{url('images/thumb_fb1.jpg')}});">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
             <span class="icon-facebook"></span>
           </div>
         </a>
       </div>
       <div class="col-md-4 col-lg-2 ftco-animate">
-        <a href="images/fb2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/thumb_fb2.jpg);">
+        <a href="{{url('images/fb2.jpg')}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{url('images/thumb_fb2.jpg')}});">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
             <span class="icon-facebook"></span>
           </div>
         </a>
       </div>
       <div class="col-md-4 col-lg-2 ftco-animate">
-        <a href="images/fb3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/thumb_fb3.jpg);">
+        <a href="{{url('images/fb3.jpg')}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{url('images/thumb_fb3.jpg')}});">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
             <span class="icon-facebook"></span>
           </div>
         </a>
       </div>
       <div class="col-md-4 col-lg-2 ftco-animate">
-        <a href="images/fb4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/thumb_fb4.jpg);">
+        <a href="{{url('images/fb4.jpg')}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{url('images/thumb_fb4.jpg')}});">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
             <span class="icon-facebook"></span>
           </div>
         </a>
       </div>
       <div class="col-md-4 col-lg-2 ftco-animate">
-        <a href="images/fb5.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/thumb_fb5.jpg);">
+        <a href="{{url('images/fb5.jpg')}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{url('images/thumb_fb5.jpg')}});">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
             <span class="icon-facebook"></span>
           </div>
         </a>
       </div>
       <div class="col-md-4 col-lg-2 ftco-animate">
-        <a href="images/fb6.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/thumb_fb6.jpg);">
+        <a href="{{url('images/fb6.jpg')}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{url('images/thumb_fb6.jpg')}});">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
             <span class="icon-facebook"></span>
           </div>
@@ -67,9 +67,10 @@
       <div class="row mb-5">
         <div class="col-md">
           <div class="mb-4">
-            <p class="title">Sindhu Store</p>
+            <a class="navbar-brand" href="{{ URL::to('/')}}">
+              <img style="margin-left:30%;" src="{{asset('images/sindhu_logo.png')}}" width="120px" height="auto" alt="Sindhu Logo">
+            </a>
             <p>আম্মুর শাড়ী আর দিদির ওড়না দিয়ে শাড়ী পরার গল্পটা শুরু...এমন শাড়ীপাগল ললনাদের জন্যই এই আয়োজন...</p>
-            
           </div>
         </div>
         <div class="col-md">

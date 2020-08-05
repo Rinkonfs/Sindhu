@@ -10676,8 +10676,6 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
-<<<<<<< HEAD
-=======
 
 
 
@@ -10713,4 +10711,108 @@ textarea.form-control {
   border-radius:50px;
   height:50px;
 }
->>>>>>> e89ac5ca0c1405d2e02b681a4ea4661a4a1b865d
+
+/*Style for the hover cart*/
+
+   @media screen and (min-width: 768px) {
+      #mySidenav{
+        overflow-y:auto;
+        overflow-x:hidden;
+        background:white;
+        position:absolute;
+        scrollbar-color: #525969;
+        scrollbar-width: thin;
+        top:70px;
+        right:0px;
+        width:280px;
+        height:auto;
+        max-height: 418px;
+        border-radius: 5px 5px 5px 5px;
+        border:0px solid red;
+        text-align: center;
+    }
+    .cart_li {
+      margin-bottom: 15px;
+       list-style: none } 
+         
+    
+       .cart_img{
+         padding-top:5px;
+         float: left;
+         margin-right: 12px;
+         width:50px;
+         height: auto;
+       }
+       
+        .item-name {
+         display: block;
+         padding-top: 10px;
+         font-size: 16px;
+         width: 120px;
+         white-space: nowrap;
+         overflow: hidden;
+         text-overflow: ellipsis;
+       }
+       
+      .item-price {
+         color:  #6394F8;
+         margin-right: 8px;
+       }
+       
+       .item-quantity {
+         color: #ABB0BE;
+       }
+       .shopping-cart-items{
+        display: inline-block;
+        background:white;
+        width:270px;
+        border:1px solid #60bed7;
+        border-radius: 2px;
+        margin:2px; 
+    }
+    .shopping-cart-header{
+        text-align: center;
+        width:280px;
+ 
+    }
+    .cart_button{
+        position:relative;
+        bottom:0px;
+        width:280px;
+        font-size:14px;
+        padding:8px;
+        background:#dbcc8f;
+        
+        }
+    .cart_button>a{
+        color:black;
+        
+    }
+    .cart_a{
+      cursor: pointer;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    #mySidenav{
+      display: none;
+    }
+  }
+.owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
+   -ms-touch-action: auto;
+   touch-action: auto;
+}
+
+@font-face{
+  font-family:"Ionicons";src:url("font/ionicons.eot?v=4.0.0-19");
+  src:url("font/ionicons.eot?v=4.0.0-19#iefix") 
+      format("embedded-opentype"),
+      url("font/ionicons.woff2?v=4.0.0-19") format("woff2"),
+      url(" font/ionicons.woff?v=4.0.0-19") format("woff"),
+      url(" font/ionicons.ttf?v=4.0.0-19") format("truetype"),
+      url(" font/ionicons.svg?v=4.0.0-19#Ionicons") format("svg");
+  font-weight:normal;
+}
+.ion-ios-add:before{content:"\f102"}
+.ion-md-close:before{content:"\f2c0"}
+.ion-ios-add:before{content:"\f102"}
+.ion-md-close:before{content:"\f2c0"}

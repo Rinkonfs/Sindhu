@@ -1,36 +1,6 @@
 @include('inc.head')
-<style>
-    .left {
-  width: 200px;
-  padding: 10px;
-}
 
-.left ul {
-  
-  background-color: #F2F2F2;
-  padding: 0px;
-}
-
-.left ul li {
-  list-style: none;
-  line-height: 30px;
-}
-
-.left ul li a {
-  color: #000000;
-  display: block;
-  padding: 5px;
-  text-align: center;
-  text-decoration: none;
-  width: 190px;
-}
-
-.left ul li a:hover {
-  background-color: #E4E4E4;
-}
-</style>
-</head>
-  <body>
+<body>
 <!-- Navbar Starts -->
     @include('inc.nav')
 <!-- Navbar Ends -->
