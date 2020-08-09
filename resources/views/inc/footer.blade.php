@@ -55,7 +55,7 @@
   </div>
 </section>
 
-<footer style="background-color:black;margin-bottom:-100px;">
+<footer style="background-color:black;position: absolute;width:100%">
     <div class="container" style="padding-top:60px;">
         {{-- <div class="row">
             <div class="mouse">
@@ -109,7 +109,15 @@
               </div>
           </div>
         </div>
-       <div style="width:100%;padding:10px;"><span style="float:left;">Copyright &copy;<script>document.write(new Date().getFullYear());
-       </script> All rights reserved Sindhu Store</span><span style="float:right;">Developed By <a target="_blank" style="color:white;" href="//www.ecarnivalbd.com/">e<span style="color:red">C</span>arnival<span style="color:red">BD</span> Limited</a></span></div>
+          <div class="footer_credit" >
+            <span class="client_name">
+              Copyright &copy;<script>document.write(new Date().getFullYear());
+              </script> All rights reserved Sindhu Store
+            </span>
+
+            <span class="dev_name">Developed By <a target="_blank" 
+              style="color:white;" href="//www.ecarnivalbd.com/">e<span style="color:red">C</span>arnival<span style="color:red">BD</span> Limited</a>
+            </span>
+        </div>
       </div>
   </footer>

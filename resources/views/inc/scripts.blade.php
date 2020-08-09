@@ -14,10 +14,10 @@
 {{-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> --}}
 {{-- <script src="{{asset('js/google-map.js')}}"></script> --}}
 <script src="{{asset('js/main.js')}}"></script>
-
+{{-- 
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>	
 <script type="text/javascript" src="{{asset('js/module_js/tshirtEditor.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/module_js/jquery.miniColors.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('js/module_js/fabric.js')}}"></script> 
-<script type="text/javascript" src="{{asset('js/module_js/jspdf.js')}}"></script> 
+<script type="text/javascript" src="{{asset('js/module_js/fabric.js')}}"></script>  --}}
+

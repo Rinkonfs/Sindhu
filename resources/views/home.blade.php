@@ -129,7 +129,7 @@
     		<div class="row">
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product d-flex flex-column">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/1.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/1.jpg" alt="Sindhu Sharee Picture">
     					</a>
     					<div class="text py-3 pb-4 px-3">
     						<div class="d-flex">
@@ -147,7 +147,7 @@
     			</div>
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product d-flex flex-column">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/2.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/2.jpg" alt="Sindhu Sharee Picture">
     						{{-- <span class="status">50% Off</span> --}}
     						<div class="overlay"></div>
     					</a>
@@ -167,7 +167,7 @@
     			</div>
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/3.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/3.jpg" alt="Sindhu Sharee Picture">
 	    					<div class="overlay"></div>
 	    				</a>
     					<div class="text py-3 pb-4 px-3">
@@ -186,7 +186,7 @@
     			</div>
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/4.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/4.jpg" alt="Sindhu Sharee Picture">
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3">
@@ -207,7 +207,7 @@
 
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product d-flex flex-column">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/5.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/5.jpg" alt="Sindhu Sharee Picture">
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3">
@@ -226,7 +226,7 @@
     			</div>
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product d-flex flex-column">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/6.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/6.jpg" alt="Sindhu Sharee Picture">
     					
     						<div class="overlay"></div>
     					</a>
@@ -247,7 +247,7 @@
     			</div>
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/7.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/7.jpg" alt="Sindhu Sharee Picture">
 	    					<div class="overlay"></div>
 	    				</a>
     					<div class="text py-3 pb-4 px-3">
@@ -267,7 +267,7 @@
     			</div>
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/8.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/8.jpg" alt="Sindhu Sharee Picture">
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 pb-4 px-3">
@@ -295,7 +295,8 @@
     	<div class="container">
 				<div class="row no-gutters">
 					<div class="col-lg-4">
-						<div class="choose-wrap divider-one img p-5 d-flex align-items-end" style="background-image: url(images/choose-1.jpg);">
+						<div class="choose-wrap divider-one img p-5 d-flex align-items-end"
+						 style="background-image: url(images/choose-1.jpg);">
 
     					<div class="text text-center text-white px-2">
 								<span class="subheading">Men's Shoes</span>
@@ -308,7 +309,8 @@
 					<div class="col-lg-8">
     				<div class="row no-gutters choose-wrap divider-two align-items-stretch">
     					<div class="col-md-12">
-	    					<div class="choose-wrap full-wrap img align-self-stretch d-flex align-item-center justify-content-end" style="background-image: url(images/choose-2.jpg);">
+							<div	class="choose-wrap full-wrap img align-self-stretch d-flex align-item-center justify-content-end" 
+									style="background-image: url(images/choose-2.jpg);">
 	    						<div class="col-md-7 d-flex align-items-center">
 	    							<div class="text text-white px-5">
 	    								<span class="subheading">Women's Shoes</span>
