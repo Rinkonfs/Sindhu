@@ -18,13 +18,13 @@ Route::get('/products/update-cart/{id}/{quantity}', 'Product\UserProductControll
 Route::delete('/products/remove-from-cart', 'Product\UserProductController@remove');
 Route::get('checkout','Product\UserProductController@checkout')->name('users.products.checkout');
 
-Route::get('orders', 'Order\UserOrderController@create')->name('users.orders.create');
+Route::post('orders', 'Order\UserOrderController@create')->name('users.orders.create');
 //End Sonjoy
 
 
 //Login and User Dashboard
 Route::get('/signup','Page_Controller@signup');
-Route::get('/login','Page_Controller@login');
+Route::get('/login','Page_Controller@login')->name('login');
 Route::get('/dashboard','Page_Controller@dashboard');
 
 // Backend pages
