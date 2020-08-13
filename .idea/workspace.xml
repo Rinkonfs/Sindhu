@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="47c860e4-530a-47f7-859f-a7076aecb28c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Order/UserOrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Order/UserOrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Page_Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Page_Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Product/UserProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Product/UserProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_28_043335_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_28_043335_create_orders_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/checkout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/checkout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/asm89/stack-cors/" />
     <ignored path="$PROJECT_DIR$/vendor/brick/math/" />
@@ -128,11 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Order/UserOrderController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="55" column="97" selection-start-line="55" selection-start-column="87" selection-end-line="55" selection-end-column="97" />
+            <state relative-caret-position="575">
+              <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
               <folding>
                 <element signature="e#46#59#0#PHP" expanded="true" />
               </folding>
@@ -140,7 +133,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/users-order-show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="550">
@@ -176,8 +169,8 @@
         <option value="$PROJECT_DIR$/resources/views/pages/checkout.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Product/UserProductController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/users-orders-history-index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Order/UserOrderController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/users-order-show.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Order/UserOrderController.php" />
       </list>
     </option>
   </component>
@@ -422,12 +415,12 @@
       <workItem from="1597124345816" duration="14214000" />
       <workItem from="1597210800478" duration="74000" />
       <workItem from="1597211540214" duration="14078000" />
-      <workItem from="1597296557494" duration="18266000" />
+      <workItem from="1597296557494" duration="18551000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46632000" />
+    <option name="totallyTimeSpent" value="46917000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1934" height="1047" extended-state="0" />
@@ -643,20 +636,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Order/UserOrderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="55" column="97" selection-start-line="55" selection-start-column="87" selection-end-line="55" selection-end-column="97" />
-          <folding>
-            <element signature="e#46#59#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/users-order-show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="98" column="54" selection-start-line="98" selection-start-column="54" selection-end-line="98" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Order/UserOrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+          <folding>
+            <element signature="e#46#59#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

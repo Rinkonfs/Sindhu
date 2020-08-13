@@ -21,7 +21,9 @@ class UserOrderController extends Controller
         $productCounter = 0;
         $productsQuantityCounter = 0;
 
-        $orders = Order::paginate(10);
+        $orders = Order::where('user_id', Auth::id())->paginate(10);
+
+        return $orders;
 
 
         $productsId = json_decode($orders[0]->product_id);
