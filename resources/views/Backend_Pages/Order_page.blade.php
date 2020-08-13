@@ -37,7 +37,7 @@
                                 <th>Color</th>
                                 <th>Size</th>
                                 <th>Description</th>
-                                <th>Stock</th>
+                                <th>Quantity</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -49,7 +49,7 @@
                                 <th>Color</th>
                                 <th>Size</th>
                                 <th>Description</th>
-                                <th>Stock</th>
+                                <th>Quantity</th>
                                 <th>Actions</th>
                             </tr>
                         </tfoot>    
@@ -82,11 +82,6 @@
                             <td>
                             <a href= "#" class="btn btn-info"><i class="fas fa-eye"></i> </a>
                             <a href= "#" class="btn btn-warning"><i class="fas fa-pen"></i> </a>
-                            <form action = "#" method="post">
-                                @csrf
-                                {{-- @method    ('DELETE') --}}
-                                <button style="margin-top:5px;" type="submit" class="btn btn-danger"><i class="fas fa-trash"></i>&nbsp;</button>
-                            </form>    
                             </td>
                             </tr>
                             {{-- @endforeach --}}

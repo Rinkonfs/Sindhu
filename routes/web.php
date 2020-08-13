@@ -10,15 +10,25 @@ Route::get('/Custom_Order','Page_Controller@customOrder');
 
 
 //Sonjoy
+
+//Cart
 Route::get('/cart','Product\UserProductController@cart')->name('users.products.cart');
+//Shop
 Route::get('/shop','Product\UserProductController@index')->name('users.products.index');
+//Products
 Route::get('/products/{crud}','Product\UserProductController@show')->name('users.products.show');
 Route::get('/products/add-to-cart/{id}', 'Product\UserProductController@addToCart')->name('users.products.add-to-cart');
 Route::get('/products/update-cart/{id}/{quantity}', 'Product\UserProductController@update');
 Route::delete('/products/remove-from-cart', 'Product\UserProductController@remove');
+//Checkout
 Route::get('checkout','Product\UserProductController@checkout')->name('users.products.checkout');
-
+//Order
 Route::post('orders', 'Order\UserOrderController@create')->name('users.orders.create');
+
+
+//User profile update
+Route::post('update-profile/{user}', 'User\UserController@update')->name('users.profile.update');
+
 //End Sonjoy
 
 

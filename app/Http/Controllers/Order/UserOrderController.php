@@ -13,12 +13,6 @@ use Illuminate\Support\Str;
 class UserOrderController extends Controller
 {
     
-    public function index()
-    {
-        //
-    }
-
-    
     public function create(Request $request)
     {
 
