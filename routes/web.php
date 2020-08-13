@@ -22,10 +22,12 @@ Route::get('/products/update-cart/{id}/{quantity}', 'Product\UserProductControll
 Route::delete('/products/remove-from-cart', 'Product\UserProductController@remove');
 //Checkout
 Route::get('checkout','Product\UserProductController@checkout')->name('users.products.checkout');
-//Order
+//User make order
 Route::post('orders', 'Order\UserOrderController@create')->name('users.orders.create');
-
-
+//User order history
+Route::get('orders', 'Order\UserOrderController@index')->name('users.orders.index');
+//User order show
+Route::get('orders/{order}', 'Order\UserOrderController@show')->name('users.orders.show');
 //User profile update
 Route::post('update-profile/{user}', 'User\UserController@update')->name('users.profile.update');
 
@@ -35,7 +37,7 @@ Route::post('update-profile/{user}', 'User\UserController@update')->name('users.
 //Login and User Dashboard
 Route::get('/signup','Page_Controller@signup');
 Route::get('/login','Page_Controller@login')->name('login');
-Route::get('/dashboard','Page_Controller@dashboard');
+Route::get('/dashboard','Page_Controller@dashboard')->name('users.dashboard');
 
 // Backend pages
 // Route::get('/clientel','Admin_controller@adminLogin');

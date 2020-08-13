@@ -45,7 +45,7 @@
 									  <div class="select-wrap">
 											<div class="icon"><span class="ion-ios-arrow-down"></span></div>
 										  <select required name="country" id="" class="form-control">
-											  @if(Auth::user())<option value="{{ Auth::user()->name }}" selected >{{ Auth::user()->name }}</option>@endif
+											  @if(Auth::user() and Auth::user()->address )<option value="{{ Auth::user()->address->country }}" selected >{{ Auth::user()->address->country }}</option>@endif
 											  <option value="France">France</option>
 											  <option value="Italy">Italy</option>
 											  <option value="Philippines">Philippines</option>
@@ -62,13 +62,13 @@
 							  <div class="col-md-6">
 								  <div class="form-group">
 									  <label for="streetaddress">Street Address <span class="text-danger">*</span></label>
-										<input name="street" @if(Auth::user())value="{{ Auth::user()->name }}"@endif required type="text" class="form-control" placeholder="House number and street name">
+										<input name="street" @if(Auth::user() and Auth::user()->address )value="{{ Auth::user()->address->street }}"@endif required type="text" class="form-control" placeholder="House number and street name">
 								  </div>
 							  </div>
 							  
 							  <div class="col-md-6">
 								  <div class="form-group">
-										<input name="apartment" @if(Auth::user())value="{{ Auth::user()->name }}"@endif type="text" class="form-control" placeholder="Appartment, suite, unit etc: (optional)">
+										<input name="apartment" @if(Auth::user() and Auth::user()->address )value="{{ Auth::user()->address->apartment }}"@endif type="text" class="form-control" placeholder="Appartment, suite, unit etc: (optional)">
 								  </div>
 							  </div>
 				  
@@ -77,7 +77,7 @@
 							  <div class="col-md-6">
 								  <div class="form-group">
 									  <label for="towncity">Town / City <span class="text-danger">*</span></label>
-										<input name="city" @if(Auth::user())value="{{ Auth::user()->name }}"@endif required type="text" class="form-control" placeholder="Your city">
+										<input name="city" @if(Auth::user() and Auth::user()->address )value="{{ Auth::user()->address->city }}"@endif required type="text" class="form-control" placeholder="Your city">
 								  </div>
 							  </div>
 				  
@@ -87,7 +87,7 @@
 						  
 									  <label for="postcodezip">Postcode / ZIP <span class="text-danger">*</span></label>
 					
-									  <input name="post_code" @if(Auth::user())value="{{ Auth::user()->name }}"@endif required type="text" class="form-control" placeholder="Area postal code">
+									  <input name="post_code" @if(Auth::user() and Auth::user()->address )value="{{ Auth::user()->address->post_code }}"@endif required type="text" class="form-control" placeholder="Area postal code">
 				  
 								  </div>
 				  
@@ -101,7 +101,7 @@
 					  
 									  <label for="phone">Phone <span class="text-danger">*</span></label>
 					
-									  <input name="phone" @if(Auth::user())value="{{ Auth::user()->name }}"@endif required type="text" class="form-control" placeholder="Your phone number">
+									  <input name="phone" @if(Auth::user())value="{{ Auth::user()->phone }}"@endif required type="text" class="form-control" placeholder="Your phone number">
 				  
 								  </div>
 				

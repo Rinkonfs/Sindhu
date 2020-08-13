@@ -28,10 +28,10 @@
                     <span class="list-group-item" style="background-color: black;color:#7b7d80;font-weight:700;font-size:18px">
                         Menu
                     </span>
-                    <a href="#" class="list-group-item">
+                    <a href="{{ route('users.dashboard') }}" class="list-group-item">
                         Account Detail
                     </a>
-                    <a href="#" class="list-group-item">
+                    <a href="{{ route('users.orders.index') }}" class="list-group-item">
                         Order History
                     </a>
                     <a href="#" class="list-group-item">

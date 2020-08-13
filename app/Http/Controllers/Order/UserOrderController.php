@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Order;
 
+use App\Crud;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\CrudsController;
 use App\Models\Address;
 use App\Models\Order;
 use App\User;
@@ -12,8 +14,49 @@ use Illuminate\Support\Str;
 
 class UserOrderController extends Controller
 {
-    
-    public function create(Request $request)
+
+    public function index()
+    {
+        $totalCosts = 0;
+        $productCounter = 0;
+        $productsQuantityCounter = 0;
+
+        $orders = Order::paginate(10);
+
+
+        $productsId = json_decode($orders[0]->product_id);
+        $productsQuantity = json_decode($orders[0]->product_quantity);
+
+
+        foreach ($productsId as $index => $productId )
+        {
+            $product = Crud::find($productId->product_id);
+            $productCounter++;
+            $productsQuantityCounter += $productsQuantity[$index]->product_quantity;
+            $totalCosts += ( $product->productPrice * $productsQuantity[$index]->product_quantity );
+        }
+
+        return view('pages.users-orders-history-index', compact('orders', 'productCounter', 'productsQuantityCounter', 'totalCosts'));
+    }
+
+    public function show(Order $order)
+    {
+        $productsId = json_decode($order->product_id);
+        $productsQuantity = json_decode($order->product_quantity);
+
+        $totalCosts = 0;
+
+        foreach ($productsId as $index => $productId)
+        {
+            $product = Crud::find($productId->product_id);
+            $products[] =[ 'product' => $product ];
+            $totalCosts += $product->productPrice * $productsQuantity[$index]->product_quantity;
+        }
+
+        return view('pages.users-order-show', compact('products', 'productsQuantity', 'totalCosts'));
+    }
+
+        public function create(Request $request)
     {
 
         if(!Auth::user())
@@ -28,6 +71,12 @@ class UserOrderController extends Controller
 
             $user->save();
 
+        }
+        else
+        {
+            Auth::user()->phone = $request->phone;
+
+            Auth::user()->save();
         }
 
         $address = new Address();
@@ -60,13 +109,12 @@ class UserOrderController extends Controller
             }
 
             $order = new Order();
-
-            $order->product_id = json_encode($productId) ;
-
-
-            $order->product_quantity = json_encode($productQuantity) ;
-
             $order->user_id = Auth::id() ? Auth::id() : $user->id ;
+            $order->order_status = "Pending"; // will be dynamic
+            $order->payment_status = "Pending"; // will be dynamic
+            $order->payment_method = "None"; // will be dynamic
+            $order->product_id = json_encode($productId) ;
+            $order->product_quantity = json_encode($productQuantity) ;
 
             $order->save();
 
