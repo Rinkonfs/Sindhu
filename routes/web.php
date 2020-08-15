@@ -13,6 +13,8 @@ Route::get('/Custom_Order','Page_Controller@customOrder');
 
 //Cart
 Route::get('/cart','Product\UserProductController@cart')->name('users.products.cart');
+
+
 //Shop
 Route::get('/shop','Product\UserProductController@index')->name('users.products.index');
 //Products
@@ -20,6 +22,8 @@ Route::get('/products/{crud}','Product\UserProductController@show')->name('users
 Route::get('/products/add-to-cart/{id}', 'Product\UserProductController@addToCart')->name('users.products.add-to-cart');
 Route::get('/products/update-cart/{id}/{quantity}', 'Product\UserProductController@update');
 Route::delete('/products/remove-from-cart', 'Product\UserProductController@remove');
+
+
 //Checkout
 Route::get('checkout','Product\UserProductController@checkout')->name('users.products.checkout');
 //User make order
@@ -30,6 +34,12 @@ Route::get('orders', 'Order\UserOrderController@index')->name('users.orders.inde
 Route::get('orders/{order}', 'Order\UserOrderController@show')->name('users.orders.show');
 //User profile update
 Route::post('update-profile/{user}', 'User\UserController@update')->name('users.profile.update');
+
+
+//Admin all orders
+Route::get('user-orders','Order\AdminOrderController@index')->middleware('isAdmin')->name('admin.orders.index');
+Route::get('user-orders/{order}','Order\AdminOrderController@show')->middleware('isAdmin')->name('admin.orders.show');
+Route::put('user-orders/{order}','Order\AdminOrderController@update')->middleware('isAdmin')->name('admin.orders.update');
 
 //End Sonjoy
 

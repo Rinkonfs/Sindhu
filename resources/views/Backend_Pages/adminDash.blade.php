@@ -113,6 +113,12 @@
             <span>Order</span>
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('admin.orders.index') }}">
+            <i class="fas fa-clipboard-list"></i>
+            <span>Orders</span>
+          </a>
+        </li>
         {{-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>

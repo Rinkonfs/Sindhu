@@ -23,7 +23,7 @@ class UserOrderController extends Controller
 
         $orders = Order::where('user_id', Auth::id())->paginate(10);
 
-        return $orders;
+        //return $orders;
 
 
         $productsId = json_decode($orders[0]->product_id);
