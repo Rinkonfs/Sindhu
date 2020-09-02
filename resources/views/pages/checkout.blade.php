@@ -19,36 +19,39 @@
 		<div class="container">
 		  <div class="row justify-content-center">
 				<div class="col-xl-10 ftco-animate">
-				  <form action="#" class="billing-form">
+				  <form method="post" action="{{ route('users.orders.create') }}" class="billing-form"  enctype="multipart/form-data">
+					  @csrf
 					  <h3 class="mb-4 billing-heading">Billing Details</h3>
-						<div class="row align-items-end">
+					  <div class="row align-items-end">
 							<div class="col-md-6">
 							  <div class="form-group">
-								  <label for="firstname">Firt Name</label>
-								  <input type="text" class="form-control" placeholder="">
+								  <label for="firstname">First Name <span class="text-danger">*</span></label>
+								  <input name="first_name" required type="text" class="form-control" placeholder="Enter your first name" @if(Auth::user())value="{{ Auth::user()->name }}"@endif>
+
 							  </div>
 						  </div>
 							
 						  <div class="col-md-6">
 							  <div class="form-group">
-								  <label for="lastname">Last Name</label>
-								  <input type="text" class="form-control" placeholder="">
+								  <label for="lastname">Last Name <span class="text-danger">*</span></label>
+								  <input name="last_name" required type="text" class="form-control" placeholder="Enter your last name" @if(Auth::user())value="{{ Auth::user()->name }}"@endif>
 							  </div>
 						  </div>
 
 						  <div class="w-100"></div>
 							  <div class="col-md-12">
 								  <div class="form-group">
-									  <label for="country">State / Country</label>
+									  <label for="country">State / Country <span class="text-danger">*</span></label>
 									  <div class="select-wrap">
 											<div class="icon"><span class="ion-ios-arrow-down"></span></div>
-										  <select name="" id="" class="form-control">
-											  <option value="">France</option>
-											  <option value="">Italy</option>
-											  <option value="">Philippines</option>
-											  <option value="">South Korea</option>
-											  <option value="">Hongkong</option>
-											  <option value="">Japan</option>
+										  <select required name="country" id="" class="form-control">
+											  @if(Auth::user() and Auth::user()->address )<option value="{{ Auth::user()->address->country }}" selected >{{ Auth::user()->address->country }}</option>@endif
+											  <option value="France">France</option>
+											  <option value="Italy">Italy</option>
+											  <option value="Philippines">Philippines</option>
+											  <option value="South">South Korea</option>
+											  <option value="Hongkong">Hongkong</option>
+											  <option value="Japan">Japan</option>
 										  </select>
 									  </div>
 								  </div>
@@ -58,14 +61,14 @@
 							  
 							  <div class="col-md-6">
 								  <div class="form-group">
-									  <label for="streetaddress">Street Address</label>
-										<input type="text" class="form-control" placeholder="House number and street name">
+									  <label for="streetaddress">Street Address <span class="text-danger">*</span></label>
+										<input name="street" @if(Auth::user() and Auth::user()->address )value="{{ Auth::user()->address->street }}"@endif required type="text" class="form-control" placeholder="House number and street name">
 								  </div>
 							  </div>
 							  
 							  <div class="col-md-6">
 								  <div class="form-group">
-										<input type="text" class="form-control" placeholder="Appartment, suite, unit etc: (optional)">
+										<input name="apartment" @if(Auth::user() and Auth::user()->address )value="{{ Auth::user()->address->apartment }}"@endif type="text" class="form-control" placeholder="Appartment, suite, unit etc: (optional)">
 								  </div>
 							  </div>
 				  
@@ -73,8 +76,8 @@
 							  
 							  <div class="col-md-6">
 								  <div class="form-group">
-									  <label for="towncity">Town / City</label>
-										<input type="text" class="form-control" placeholder="">
+									  <label for="towncity">Town / City <span class="text-danger">*</span></label>
+										<input name="city" @if(Auth::user() and Auth::user()->address )value="{{ Auth::user()->address->city }}"@endif required type="text" class="form-control" placeholder="Your city">
 								  </div>
 							  </div>
 				  
@@ -82,9 +85,9 @@
 					  
 								  <div class="form-group">
 						  
-									  <label for="postcodezip">Postcode / ZIP *</label>
+									  <label for="postcodezip">Postcode / ZIP <span class="text-danger">*</span></label>
 					
-									  <input type="text" class="form-control" placeholder="">
+									  <input name="post_code" @if(Auth::user() and Auth::user()->address )value="{{ Auth::user()->address->post_code }}"@endif required type="text" class="form-control" placeholder="Area postal code">
 				  
 								  </div>
 				  
@@ -96,9 +99,9 @@
 				  
 								  <div class="form-group">
 					  
-									  <label for="phone">Phone</label>
+									  <label for="phone">Phone <span class="text-danger">*</span></label>
 					
-									  <input type="text" class="form-control" placeholder="">
+									  <input name="phone" @if(Auth::user())value="{{ Auth::user()->phone }}"@endif required type="text" class="form-control" placeholder="Your phone number">
 				  
 								  </div>
 				
@@ -108,96 +111,93 @@
 				  
 								  <div class="form-group">
 					  
-									  <label for="emailaddress">Email Address</label>
+									  <label for="emailaddress">Email Address <span class="text-danger">*</span></label>
 					
-									  <input type="text" class="form-control" placeholder="">
+									  <input name="email" @if(Auth::user())value="{{ Auth::user()->email }}"@endif required type="text" class="form-control" placeholder="Your email address">
 				  
 								  </div>
 			  
 							  </div>
 			  
 							  <div class="w-100"></div>
-			  
+
+								@if(!Auth::user())
 							  <div class="col-md-12">
-				  
+
 								  <div class="form-group mt-4">
 									  <div class="radio">
-										
-										  <label class="mr-3"><input type="radio" name="optradio"> Create an Account? </label>
-											<label><input type="radio" name="optradio"> Ship to different address</label>
+										  <label class="mr-3"><input checked type="radio" name="optradio"> Create an Account? </label>
+										  <label class="mr-3 text-danger"> Already have an account? <a href="{{ route('login') }}">Login</a> </label>
 									  </div>
 								  </div>
 			  
 							  </div>
+									@endif
 			  
-					  </div>
+						  </div>
 			
+
+
+
+							<?php $total = 0 ?>
+
+							@foreach(session('cart') as $id => $details)
+								<?php $total += $details['price'] * $details['quantity'] ?>
+							@endforeach
+
+						<div class="row mt-5 pt-3 d-flex">
+							<div class="col-md-6 d-flex">
+								<div class="cart-detail cart-total bg-light p-3 p-md-4">
+									<h3 class="billing-heading mb-4">Cart Total</h3>
+									<p class="d-flex">
+											  <span>Subtotal</span>
+											  <span>Tk. 0.00</span>
+										  </p>
+										  <p class="d-flex">
+											  <span>Delivery</span>
+											  <span>Tk. 0.00</span>
+										  </p>
+										  <p class="d-flex">
+											  <span>Discount</span>
+											  <span>Tk. 0.00</span>
+										  </p>
+										  <hr>
+										  <p class="d-flex total-price">
+											  <span>Total</span>
+											  <span>Tk. {{ $total }}</span>
+										  </p>
+										  </div>
+							</div>
+							<div class="col-md-6">
+								<div class="cart-detail bg-light p-3 p-md-4">
+									<h3 class="billing-heading mb-4">Payment Method</h3>
+
+											  <div class="form-group">
+												  <div class="col-md-12">
+													  <div class="radio">
+														 <label><input type="radio" name="optradio" class="mr-2"> bKash</label>
+													  </div>
+												  </div>
+											  </div>
+											<div class="form-group">
+												<div class="col-md-12">
+													<div class="radio">
+														<label><input type="radio" name="optradio" class="mr-2"> Cash On Delivery</label>
+													</div>
+												</div>
+											</div>
+											  <div class="form-group">
+												  <div class="col-md-12">
+						   							  <div class="checkbox">
+														 <label><input type="checkbox" value="" class="mr-2"> I have read and accept the terms and conditions</label>
+													  </div>
+												  </div>
+											  </div>
+											<button class="btn btn-primary py-3 px-4" type="submit">Place an order</button>
+									</div>
+								</div>
+							</div>
 				  </form><!-- END -->
-
-
-					<?php $total = 0 ?>
-					  
-					@foreach(session('cart') as $id => $details)
-						<?php $total += $details['price'] * $details['quantity'] ?>
-					@endforeach
-			<div class="row mt-5 pt-3 d-flex">
-				<div class="col-md-6 d-flex">
-					<div class="cart-detail cart-total bg-light p-3 p-md-4">
-						<h3 class="billing-heading mb-4">Cart Total</h3>
-						<p class="d-flex">
-								  <span>Subtotal</span>
-								  <span>Tk. 0.00</span>
-							  </p>
-							  <p class="d-flex">
-								  <span>Delivery</span>
-								  <span>Tk. 0.00</span>
-							  </p>
-							  <p class="d-flex">
-								  <span>Discount</span>
-								  <span>Tk. 0.00</span>
-							  </p>
-							  <hr>
-							  <p class="d-flex total-price">
-								  <span>Total</span>
-								  <span>Tk. {{ $total }}</span>
-							  </p>
-							  </div>
-				</div>
-				<div class="col-md-6">
-					<div class="cart-detail bg-light p-3 p-md-4">
-						<h3 class="billing-heading mb-4">Payment Method</h3>
-								  <div class="form-group">
-									  <div class="col-md-12">
-										  <div class="radio">
-											 <label><input type="radio" name="optradio" class="mr-2"> Direct Bank Tranfer</label>
-										  </div>
-									  </div>
-								  </div>
-								  <div class="form-group">
-									  <div class="col-md-12">
-										  <div class="radio">
-											 <label><input type="radio" name="optradio" class="mr-2"> Check Payment</label>
-										  </div>
-									  </div>
-								  </div>
-								  <div class="form-group">
-									  <div class="col-md-12">
-										  <div class="radio">
-											 <label><input type="radio" name="optradio" class="mr-2"> Paypal</label>
-										  </div>
-									  </div>
-								  </div>
-								  <div class="form-group">
-									  <div class="col-md-12">
-										  <div class="checkbox">
-											 <label><input type="checkbox" value="" class="mr-2"> I have read and accept the terms and conditions</label>
-										  </div>
-									  </div>
-								  </div>
-								<p><a href="{{ route('users.orders.create') }}"class="btn btn-primary py-3 px-4">Place an order</a></p>
-							  </div>
-				</div>
-			</div>
 		</div> <!-- .col-md-8 -->
 	  </div>
 	</div>

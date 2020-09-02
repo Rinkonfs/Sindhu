@@ -10,22 +10,44 @@ Route::get('/Custom_Order','Page_Controller@customOrder');
 
 
 //Sonjoy
+
+//Cart
 Route::get('/cart','Product\UserProductController@cart')->name('users.products.cart');
+
+
+//Shop
 Route::get('/shop','Product\UserProductController@index')->name('users.products.index');
+//Products
 Route::get('/products/{crud}','Product\UserProductController@show')->name('users.products.show');
 Route::get('/products/add-to-cart/{id}', 'Product\UserProductController@addToCart')->name('users.products.add-to-cart');
-// Route::patch('/products/update-cart', 'Product\UserProductController@update'); 
+Route::get('/products/update-cart/{id}/{quantity}', 'Product\UserProductController@update');
 Route::delete('/products/remove-from-cart', 'Product\UserProductController@remove');
-Route::get('checkout','Product\UserProductController@checkout')->name('users.products.checkout');
 
-Route::get('orders', 'Order\UserOrderController@create')->name('users.orders.create');
+
+//Checkout
+Route::get('checkout','Product\UserProductController@checkout')->name('users.products.checkout');
+//User make order
+Route::post('orders', 'Order\UserOrderController@create')->name('users.orders.create');
+//User order history
+Route::get('orders', 'Order\UserOrderController@index')->name('users.orders.index');
+//User order show
+Route::get('orders/{order}', 'Order\UserOrderController@show')->name('users.orders.show');
+//User profile update
+Route::post('update-profile/{user}', 'User\UserController@update')->name('users.profile.update');
+
+
+//Admin all orders
+Route::get('user-orders','Order\AdminOrderController@index')->middleware('isAdmin')->name('admin.orders.index');
+Route::get('user-orders/{order}','Order\AdminOrderController@show')->middleware('isAdmin')->name('admin.orders.show');
+Route::put('user-orders/{order}','Order\AdminOrderController@update')->middleware('isAdmin')->name('admin.orders.update');
+
 //End Sonjoy
 
 
 //Login and User Dashboard
 Route::get('/signup','Page_Controller@signup');
-Route::get('/login','Page_Controller@login');
-Route::get('/dashboard','Page_Controller@dashboard');
+Route::get('/login','Page_Controller@login')->name('login');
+Route::get('/dashboard','Page_Controller@dashboard')->name('users.dashboard');
 
 // Backend pages
 // Route::get('/clientel','Admin_controller@adminLogin');

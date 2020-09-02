@@ -78,7 +78,9 @@
 	          		<p style="color: #000;">80 piece available</p>
 	          	</div>
           	</div>
-          	<p><a href="cart" class="btn btn-black py-3 px-5 mr-2">Add to Cart</a><a href="cart" class="btn btn-primary py-3 px-5">Buy now</a></p>
+					<p id="product-id" style="display: none">{{ $crud->id }}</p>
+
+					<p class="update-cart btn btn-black py-3 px-5 mr-2">Add to Cart</p>
     			</div>
     		</div>
 
@@ -257,9 +259,23 @@
 
 	@include('inc/scripts')
 	<script>
+		$(".update-cart").click(function (e) {
+
+			$.ajax({
+				url: '/products/update-cart/{id}/{quantity}',
+				method: "GET",
+				data: {_token: '{{ csrf_token() }}', id: $('#product-id').text(), quantity: $('#quantity').val()},
+				success: function (response) {
+
+					window.location.reload();
+					//console.log(response);
+				}
+			});
+		});
+
 		$(document).ready(function(){
-	
-		var quantitiy=0;
+
+
 		   $('.quantity-right-plus').click(function(e){
 	
 				// Stop acting like a button

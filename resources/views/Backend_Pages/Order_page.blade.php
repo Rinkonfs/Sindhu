@@ -37,7 +37,7 @@
                                 <th>Color</th>
                                 <th>Size</th>
                                 <th>Description</th>
-                                <th>Stock</th>
+                                <th>Quantity</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -49,7 +49,7 @@
                                 <th>Color</th>
                                 <th>Size</th>
                                 <th>Description</th>
-                                <th>Stock</th>
+                                <th>Quantity</th>
                                 <th>Actions</th>
                             </tr>
                         </tfoot>    

@@ -6,13 +6,13 @@ use App\Crud;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserProductController extends Controller
 {
     public function index()
     {
         $products = Crud::paginate(6);
-
 
         return view('pages.shop', compact('products'));
     }
@@ -88,18 +88,59 @@ class UserProductController extends Controller
     }
 
 
-    public function update(Request $request)
+    public function update()
     {
-        if($request->id and $request->quantity)
-        {
-            $cart = session()->get('cart');
- 
-            $cart[$request->id]["quantity"] = $request->quantity;
- 
+        $id = $_GET['id'];
+        $quantity = $_GET['quantity'];
+
+        $cart = session()->get('cart');
+
+        $product = Crud::find($id);
+
+
+        // if cart not empty then check if this product exist then increment quantity
+        if(isset($cart[$id])) {
+
+            $cart[$id]['quantity'] = $cart[$id]['quantity'] + $quantity;
+
             session()->put('cart', $cart);
- 
-            session()->flash('success', 'Cart updated successfully');
+
+            return redirect()->back()->with('success', 'Product added to cart successfully!');
+
         }
+
+        if(!$cart) {
+
+            $cart = [
+                $id => [
+                    "id" => $product->id,
+                    "name" => $product->productName,
+                    "quantity" => $quantity,
+                    "price" => $product->productPrice,
+                    "photo" => $product->image,
+                    "description" => $product->description
+                ]
+            ];
+
+            session()->put('cart', $cart);
+
+            return redirect()->back()->with('success', 'Product added to cart successfully!');
+        }
+
+
+        // if item not exist in cart then add to cart with quantity = 1
+        $cart[$id] = [
+            "id" => $product->id,
+            "name" => $product->productName,
+            "quantity" => $quantity,
+            "price" => $product->productPrice,
+            "photo" => $product->image,
+            "description" => $product->description
+        ];
+
+        session()->put('cart', $cart);
+
+        return redirect()->back()->with('success', 'Product added to cart successfully!');
     }
 
     public function remove(Request $request)

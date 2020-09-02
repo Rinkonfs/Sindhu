@@ -114,9 +114,9 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('crud.index') }}">
+          <a class="nav-link" href="{{ route('admin.orders.index') }}">
             <i class="fas fa-clipboard-list"></i>
-            <span>Coupon</span>
+            <span>Orders</span>
           </a>
         </li>
         {{-- <li class="nav-item dropdown">

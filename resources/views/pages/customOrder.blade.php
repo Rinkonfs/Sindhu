@@ -709,7 +709,6 @@
 		$("#img-polaroid4").click(function() {
 				/*$("#shirtDiv").css("background-blend-mode", "darken");*/
 				$("#par").css("background-image", "url('{{ asset('images/module_images/par-4.png')}}')");
-
 				console.log(opt +" :clicked 4");
 			});
 		$("#img-polaroid5").click(function() {
