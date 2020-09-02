@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>	
 	<script type="text/javascript" src="{{asset('js/module_js/tshirtEditor.js')}}"></script>
 	<script type="text/javascript" src="{{asset('js/module_js/jquery.miniColors.min.js')}}"></script>
 	<script type="text/javascript" src="{{asset('js/module_js/fabric.js')}}"></script> 
@@ -17,6 +17,10 @@
 <!-- OWN STYLE START-->
 	<!-- <link rel="stylesheet" type="text/css" href="bootstrap.css"> -->
 	<script type="text/javascript" src="{{asset('js/module_js/bootstrap.min.js')}}"></script> 
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>	
+	<!-- Canvas to image function -->
+	 <script src="https://hongru.github.io/proj/canvas2image/canvas2image.js"></script>
 
 <!--  OWN STYLE END-->
 
@@ -410,6 +414,24 @@
 	#btn_preview_save{
 		position: relative;
 		width: 49%;
+		margin-top: 5px;
+		padding: 5px;
+		border-radius: 5px;
+		border-color: black;
+	}
+
+	#btn_preview_order{
+		position: relative;
+		width: 49%;
+		color: white;
+		border-radius: 6px;
+		background:#1085b5;
+		/* #28a745 */
+		padding:5px; 
+	}
+	#btn_preview_order:hover{
+		
+		background:#55bed8;
 		
 	}
 	#close{
@@ -461,8 +483,8 @@
 	<div id="mySidenav" class="sidenav">
 		<div id="footer_btn" >
 			<button id="close" onclick="closeNav()" type="button" class="btn btn-danger btn-lg btn-block">Close</button>
-			<button id="btn_preview_save" type="button" class="btn btn-success btn-lg"  data-toggle="modal" data-target="#share_prev">Preview</button> 
-			<button id="btn_preview_save" type="button" class="btn btn-success btn-lg" >Save</button>
+			<input id="btn_preview_save" placeholder="Quantity" type="number" class=""  data-toggle="modal" data-target="#share_prev"/>
+			<input id="btn_preview_order" type="submit" value="Order" class=""  onclick="testScrnShot()" />
 		</div>
 			
 		<!-- THIS IS THE START OF SELECT BUTTON -->
@@ -577,12 +599,64 @@
 
 	</div>
 
+	{{-- THis is the custom image --}}
+	{{-- <canvas id="canvasSharee" width="500" height="680" style="border:2px solid red;position: absolute;left:700;" >
+		<div  id="canvasshirtDiv"> </div>
+		<div  id="canvasshirtDiv1"> </div>
+		<div  id="canvasshirtDiv1_white"> </div>
+		<div  id="canvaspar"> </div>
+		<div  id="canvasachol"> </div>
+		<div  id="canvasparSide"> </div>
+		<div  id="canvasshirtDiv2" > </div>
+	</canvas>	
+	<div id="previewImage"></div> --}}
+
+	{{-- THis is the custom image END--}}
+
 
 
 
 		
 
 	<script>
+		
+		var dataURL;
+		function testScrnShot() {
+			html2canvas(document.getElementById("sharee"), {
+				onrendered: function (canvas) {
+					document.body.appendChild(canvas);            
+					dataURL = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+					dataURL.png;
+					console.log(dataURL);
+
+
+				}
+			});
+		}
+		
+		console.log("THIS IS THE TEXT"+dataURL);
+		function check(){
+			if(dataURL!="" || dataURL!=undefined ){
+				window.location.href=dataURL;
+				console.log("INSIDE:"+dataURL);
+			}
+			else{
+				alert("No picture is saved yet");	
+				console.log("INSIDE ELSE:"+dataURL);
+			}
+		}
+		// function to_image(){
+				
+        //         var canvas = document.getElementById("canvasSharee");
+        //         document.getElementById("previewImage").src = canvas.toDataURL("image/png");
+        //         Canvas2Image.saveAsPNG(canvas);
+		// 		console.log("THIS IS THE CONSOL OF IMAGE" + Canvas2Image.saveAsPNG(canvas) );
+
+        // }
+
+
+
+
 		//Custom FUNTION STARTS
 		/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 		function openNav() {
@@ -635,6 +709,7 @@
 		$("#img-polaroid4").click(function() {
 				/*$("#shirtDiv").css("background-blend-mode", "darken");*/
 				$("#par").css("background-image", "url('{{ asset('images/module_images/par-4.png')}}')");
+
 				console.log(opt +" :clicked 4");
 			});
 		$("#img-polaroid5").click(function() {
@@ -679,6 +754,8 @@
 	});
 		
 	});
+	
+	
 	</script>
 
 </body>	

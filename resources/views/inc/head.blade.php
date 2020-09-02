@@ -13,8 +13,9 @@
     
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    
-    
+
+    <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+
     <link rel="stylesheet" href="{{asset('css/animate.css')}}">
     <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
@@ -41,7 +42,16 @@
       width:100%;
       text-align: center;
     }
+    #mobileBanner{
+      
+      
+    }
+    #home-section{
+      display: none;
+    }
+    
   }
+  
   @media only screen and (min-width: 768px) {
     .dev_name{
       float:right;
@@ -53,7 +63,16 @@
       width:100%;
       padding:10px;
     }
+    #bannerSlider{
+      margin-top:50px;
+      height: 700px !important;
+      width:auto;
+    }
+    #home-section2{
+      display:none;
+    }
   }
+
   
 /* ----------REGISTER CSS----------- */
   /* .left {
@@ -180,6 +199,43 @@
     text-shadow:0 2px 4px rgba( 0,0,0,0.6);
   } */
 /* ----------Custom Module CSS----------- */
+
+#the1{
+  position: absolute;
+}
+
+.container-fluid{
+  padding:100px
+}
+#about_photo{
+  height:380px;
+  width:auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#about_text{
+  transform: translate(-10%, 10%);
+}
+#more {display: none;}
+#more1{display: none;}
+#myBtn{
+  color:#dbcc8f;
+}
+#myBtn:hover{
+  color:black;
+  cursor: pointer;
+}
+#myBtn1{
+  color:#dbcc8f;
+}
+#myBtn1:hover{
+  color:black;
+  cursor: pointer;
+}
+
+
+
+
 
 
 </style>

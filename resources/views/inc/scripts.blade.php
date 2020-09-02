@@ -21,3 +21,24 @@
 <script type="text/javascript" src="{{asset('js/module_js/jquery.miniColors.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/module_js/fabric.js')}}"></script>  --}}
 
+
+<script>
+    function readMore(x,y,z) {
+  var dots = document.getElementById(x);
+  var moreText = document.getElementById(y);
+  var btnText = document.getElementById(z);
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+
+
+</script>
+

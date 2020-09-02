@@ -39,9 +39,13 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/crud','CrudsController')->middleware('isAdmin')->name('*','crud');
+
 // Route::resource('/orders','UserOrderController');
-
 // admin controller
-
 // Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('isAdmin');
+
+
+
+//COUPON CONTROLLER
+Route::get('/coupon','Coupon\adminCouponController@coupon');
 
