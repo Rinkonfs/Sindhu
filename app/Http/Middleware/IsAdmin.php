@@ -16,16 +16,18 @@ class IsAdmin
     public function handle($request, Closure $next)
 
     {
-
+        // if(auth()->check() && auth()->user()->is_admin == 1){
         if(auth()->user()->isAdmin==1){
 
             return $next($request);
+            //  return view('Backend_Pages/adminLogin');
 
         }
 
-        //return "hello";
+       
         else{
 
+            // return "no redirection";
             return redirect()->intended('/home');
 
         }

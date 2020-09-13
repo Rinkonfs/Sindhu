@@ -82,13 +82,50 @@
           </div>
         </div>
       </div>  --}}
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-6" >
+      <div class="container pt-5  ">
+        
+         
+          <div class="row team-row">
+        
+            <div class="col-md-4 col-sm-6 team-wrap">
+              
+            </div>
+           
+        
+            <div class="col-md-4 col-sm-6 team-wrap">
+              <div class="team-member text-center">
+                <div class="team-img">
+                  <img src="images/SindhuApu.jpeg" alt="" >
+                  <div class="overlay">
+                    <div class="team-details text-center">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                       ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                       exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in 
+                      voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <h6 class="team-title">Sindhu Neegar</h6>
+                <span>Owner - Sindhu Store</span>
+              </div>
+            </div>
+            
+        
+            <div class="col-md-4 col-sm-6 team-wrap">
+              
+            </div>
+            
+        
+          </div>
+        </div>
+        {{-- <div class="row" style="padding:50px;">
+          <div class="col-sm-12" >
             <div class="card">
-              <div class="row no-gutters">
+              <div class="row no-gutters" style="padding:50px;">
                 <div class="col-auto">
-                <img src="images/SindhuApu.jpeg" class="img-fluid" alt="" height="auto" width="280">
+                <img src="images/SindhuApu.jpeg" class="img " alt="" height="auto" width="380">
                 </div>
                 <div class="col">
                   <div class="card-block px-2">
@@ -105,7 +142,7 @@
             </div>
            
           </div>
-          <div class="col-sm-6">
+          {{-- <div class="col-sm-6">
             <div class="card">
               <div class="row no-gutters">
                 <div class="col-auto">
@@ -125,9 +162,9 @@
               </div>
             </div>
             
-          </div>
+          </div> --}}
           
-        </div>
+        </div> --}}
       </div> 
       
 		
@@ -213,7 +250,7 @@
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-4 pl-4 line">her choice and the quality of the product тЭдтЭдтЭд</p>
+                    <p class="mb-4 pl-4 line">her choice and the quality of the product ❤❤❤</p>
                     <p class="name">Arnisa Anawar Jhilik</p>
                     <span class="position">Training and Development Officer-Brac</span>
                   </div>
@@ -241,8 +278,8 @@
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-4 pl-4 line">sarees r same as pictureЁЯМ╝ Besides prize also reasonable</p>
-                    <p class="name">ржЬрж╛ржирзНржирж╛рждрзБрж▓ ржЗрж╕рж▓рж╛ржо ржорзАржо</p>
+                    <p class="mb-4 pl-4 line">sarees r same as picture🌼 Besides prize also reasonable</p>
+                    <p class="name">জান্নাতুল ইসলাম মীম</p>
                     <span class="position"> Dhaka University Drama Troupe -DUDT</span>
                   </div>
                 </div>
@@ -255,8 +292,8 @@
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-4 pl-4 line">ржЖржорж┐ ржЪрж╛ ржЦрзЛрж░ ржирж╛ ржПржХржжржоредржХрж┐ржирзНрждрзБ рж╕рж┐ржирзНржзрзБ рждрзЗ ржпржЦржи ржПржЗ рж╢рж╛рзЬрж┐ржЯрж╛ ржжрзЗржЦрж▓рж╛ржо рж╕рж╛ржерзЗржЗ рж╕рж╛ржерзЗржЗ ржоржирзЗ рж╣рж▓рзЛ ржПржЗ рж╢рж╛рзЬрж┐ ржЖржорж╛рж░ ржЪрж╛ржЗредржмрзНржпрж╛рж╕ ржирж┐ржЬрзЗрж░ ржХрж░рзЗ ржирж┐рж▓рж╛ржо рж╢рж╛рзЬрж┐ржЯрж╛ ржХрзЗред ржЬрзЛрж╕ ржПржХржЯрж╛ рж╢рж╛рзЬрж┐ред тЩетЩетЩе рж╕рж┐ржирзНржзрзБ'рж░ ржЬржирзНржп рж╢рзБржнржХрж╛ржоржирж╛ рж░ржЗрж▓рзЛ ржЕржирзЗржХред ЁЯТЩ</p>
-                    <p class="name">ржЕржнрзНрж░ рждржиржпрж╝рж╛ ржмрзГрж╖рзНржЯрж┐</p>
+                    <p class="mb-4 pl-4 line">আমি চা খোর না একদম।কিন্তু সিন্ধু তে যখন এই শাড়িটা দেখলাম সাথেই সাথেই মনে হলো এই শাড়ি আমার চাই।ব্যাস নিজের করে নিলাম শাড়িটা কে। জোস একটা শাড়ি। ♥♥♥ সিন্ধু'র জন্য শুভকামনা রইলো অনেক। 💙</p>
+                    <p class="name">অভ্র তনয়া বৃষ্টি</p>
                     <span class="position">Business Owner at khudroo</span>
                   </div>
                 </div>
@@ -269,8 +306,8 @@
                     </span>
                   </div>
                   <div class="text">
-                    <p class="mb-4 pl-4 line">рж╕рж┐ржирзНржзрзБрж░ ржпрждрзНржирзЗ ржХрж░рж╛ рж╢рж╛рзЬрж┐рждрзЗ, рж╢рж┐рж▓рзНржкрзЗрж░ ржЫрзЛржБрзЯрж╛рзЯ рж╣рзЯрзЗ ржЙржаржмрзЗржи ржорзВрж░рзНрждрж┐ржорждрзА ржХржмрж┐рждрж╛ред ржкрзНрж░рж┐рзЯ ржмрж┐рж╖рзЯ ржмрж╛ рж▓рж┐рж░рж┐ржХрж╕рж╣ ржорж╛ржирж╕ржорзНржоржд рж╢рж╛рзЬрж┐ ржЦрзБржБржЬрзЗ ржкрж╛ржмрзЗржиред рж╢рзБржнржХрж╛ржоржирж╛ рж╕рж┐ржирзНржзрзБрж░ ржЬржирзНржпред ЁЯТЦ</p>
-                    <p class="name">ржорж╛рж░рж┐ржпрж╝рж╛рждрзБржи ржорзАржоржмрзГрж╖рзНржЯрж┐</p>
+                    <p class="mb-4 pl-4 line">সিন্ধুর যত্নে করা শাড়িতে, শিল্পের ছোঁয়ায় হয়ে উঠবেন মূর্তিমতী কবিতা। প্রিয় বিষয় বা লিরিকসহ মানসম্মত শাড়ি খুঁজে পাবেন। শুভকামনা সিন্ধুর জন্য। 💖</p>
+                    <p class="name">মারিয়াতুন মীমবৃষ্টি</p>
                     <span class="position">Student,University of Dhaka</span>
                   </div>
                 </div>

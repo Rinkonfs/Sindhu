@@ -37,17 +37,27 @@
 			</div> --}}
 			<div class="slider-item js-fullheight" id="bannerSlider" >
 				<img class="order-md-last img-fluid" 
-					src="images/2 2.webp"
+					src="images/1-700.webp"
 					alt="">
 			</div>
 			<div class="slider-item js-fullheight" >
 				<img class="order-md-last img-fluid" id="bannerSlider"
-					src="images/6 2.webp"
+					src="images/2-700.webp"
 					alt="">
 			</div>
 			<div class="slider-item js-fullheight" >
 				<img class="order-md-last img-fluid" id="bannerSlider"
-					src="images/7 2.webp"
+					src="images/3-700.webp"
+					alt="">
+			</div>
+			<div class="slider-item js-fullheight" >
+				<img class="order-md-last img-fluid" id="bannerSlider"
+					src="images/4-700.webp"
+					alt="">
+			</div>
+			<div class="slider-item js-fullheight" >
+				<img class="order-md-last img-fluid" id="bannerSlider"
+					src="images/5-700.webp"
 					alt="">
 			</div>
 			
@@ -93,17 +103,27 @@
 			</div> --}}
 			<div class="slider-item js-fullheight"  >
 				<img class="order-md-last img-fluid" 
-					src="images/2 1 1.webp"
+					src="images/1-750.webp"
 					alt="">
 			</div>
 			<div class="slider-item js-fullheight" >
 				<img class="order-md-last img-fluid" 
-					src="images/6 1 1.webp"
+					src="images/2-750.webp"
 					alt="">
 			</div>
 			<div class="slider-item js-fullheight" >
 				<img class="order-md-last img-fluid" 
-					src="images/7 1 1.webp"
+					src="images/3-750.webp"
+					alt="">
+			</div>
+			<div class="slider-item js-fullheight" >
+				<img class="order-md-last img-fluid" 
+					src="images/4-750.webp"
+					alt="">
+			</div>
+			<div class="slider-item js-fullheight" >
+				<img class="order-md-last img-fluid" 
+					src="images/5-750.webp"
 					alt="">
 			</div>
 			
@@ -136,7 +156,7 @@
               </div>
               <div class="media-body">
                 <h3 class="heading">Support Customer</h3>
-                <p>You have a question? We are here to answer.</p>
+                <p>You have a question? We are here to answer.Call <a href="tel:+8801766598447" style="color:#1d90bb !important;">01766598447</a></p>
               </div>
             </div>    
           </div>
@@ -146,8 +166,8 @@
             		<span class="flaticon-payment-security"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Secure Payments</h3>
-                <p>Payment has never been easy and more secure with our payment methods</p>
+                <h3 class="heading">Payments Options</h3>
+                <p>Pay us easily through Bkash and Cash on Delivery methods</p>
               </div>
             </div>      
           </div>
@@ -159,7 +179,7 @@
     	<div class="container">
 				<div class="row justify-content-center mb-3 pb-3">
           <div class="col-md-12 heading-section text-center ftco-animate">
-            <h2 class="mb-4">New Sharee Arrival</h2>
+            <h2 class="mb-4">New Arrival</h2>
             <p>The simpler the sari is, the more breathtaking it can be</p>
           </div>
         </div>   		
@@ -369,7 +389,7 @@
 				    						<h2>Exclusive Designs</h2>
 				    						<p style="color:black;">Exclusive sharees with great deals every week</p>--}}
 				    						  <img src="images/sindhu_logo.png" alt="sindhu logo" width="150" height="133" > 
-    			    						<h2 style="color:#dbcc8f;">Sindhu Store</h2>
+    			    						{{-- <h2 style="color:#dbcc8f;">Sindhu Store</h2> --}}
 				    						 {{--<p><a href="{{ URL::to('/shop') }}" class="btn btn-black px-3 py-2">Shop now</a></p>--}}
 				    					</div>
 		    						</div>
@@ -400,8 +420,9 @@
     			</div>
     			<div class="col-md-6">
     				<div class="heading-section heading-section-white">
-    					<span class="subheading">Deal of the month</span>
-	            <h2 class="mb-3">Deal of the month</h2>
+    					
+				<h2 class="mb-3">New Deals Every Week</h2>
+				<span class="subheading">Exclusive Sarees with Great Deals Every Week</span>
 	          </div>
     				{{-- <div id="timer" class="d-flex mb-4">
 						  <div class="time" id="days"></div>
@@ -410,7 +431,7 @@
 						  <div class="time pl-4" id="seconds"></div>
 						</div> --}}
 						<div class="text-deal">
-							<h2><a href="#">Hand Loom Sharee </a></h2>
+							<h2><a href="#">Hand Loom Saree </a></h2>
 							<p class="price"><span class="mr-2 price-dc">&#2547; 1800</span><span class="price-sale">&#2547; 1599</span></p>
 							<ul class="thumb-deal d-flex mt-4">
 								<li class="img" style="background-image: url(images/product-6.webp);"></li>

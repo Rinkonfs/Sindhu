@@ -34,12 +34,12 @@
                     <a href="{{ route('users.orders.index') }}" class="list-group-item">
                         Order History
                     </a>
-                    <a href="#" class="list-group-item">
+                    <a href="#" onclick="comingSoon()" class="list-group-item">
                         Support
                     </a>
-                    <a href="#" class="list-group-item">
+                    {{-- <a href="#" class="list-group-item">
                         Track Order
-                    </a>
+                    </a> --}}
                 </div>
             </div>
             <div class="col-xs-4 card-body" style="padding: 50px;">
@@ -47,7 +47,7 @@
 
                 @if($orders->count())
 
-                <div id="">
+                <div id="the1">
                     <div class="card mb-3">
                         <div class="card-header">
                             <i class="fas fa-shopping-bag"> All Orders</i>
@@ -93,7 +93,7 @@
                                         <td>{{ $order->payment_method }}</td>
                                         <td>{{ $productCounter }}</td>
                                         <td>{{ $productsQuantityCounter }}</td>
-                                        <td>{{ $totalCosts }}</td>
+                                        <td>&#x9f3;{{ $totalCosts }}</td>
                                         <td>{{ $order->created_at->format('d-m-y') }}</td>
                                         <td>
                                             <a href= "{{ route('users.orders.show', $order->id) }}" class="btn btn-info"><i class="fas fa-eye"></i> </a>
@@ -144,6 +144,7 @@
 </div>
 <!-- Java Scripts -->
 @include('inc/scripts')
+
 
 </body>
 </html>

@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Delivery\DeliveryChargeController;
 
 class UserProductController extends Controller
 {
@@ -102,10 +103,9 @@ class UserProductController extends Controller
         if(isset($cart[$id])) {
 
             $cart[$id]['quantity'] = $cart[$id]['quantity'] + $quantity;
-
             session()->put('cart', $cart);
-
             return redirect()->back()->with('success', 'Product added to cart successfully!');
+            
 
         }
 
@@ -163,6 +163,10 @@ class UserProductController extends Controller
 
 
     public function checkout(){
-        return view('pages.checkout');
+        
+       $deliveryCharge = (new DeliveryChargeController)->show();
+       
+       return view('pages.checkout',compact('deliveryCharge'));
+       
     }
 }

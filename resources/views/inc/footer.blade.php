@@ -3,7 +3,7 @@
     <div class="row justify-content-center">
       <div class="col-md-8 heading-section text-center mb-4 ftco-animate">
         <h2 class="mb-4">Follow Us On Facebook</h2>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+        <p>We are also in <a target="_blank" href="https://www.facebook.com/sindhustores/" style="color:#4267b2 !important;">Facebook</a>.For any queries connect us on facebook.For further update press the like button.</p>
       </div>
     </div>
   </div>
@@ -12,42 +12,42 @@
       <div class="col-md-4 col-lg-2 ftco-animate">
         <a href="{{url('images/fb1.jpg')}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{url('images/thumb_fb1.jpg')}});">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
-            <span class="icon-facebook"></span>
+            <span class="icon-search"></span>
           </div>
         </a>
       </div>
       <div class="col-md-4 col-lg-2 ftco-animate">
         <a href="{{url('images/fb2.jpg')}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{url('images/thumb_fb2.jpg')}});">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
-            <span class="icon-facebook"></span>
+            <span class="icon-search"></span>
           </div>
         </a>
       </div>
       <div class="col-md-4 col-lg-2 ftco-animate">
         <a href="{{url('images/fb3.jpg')}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{url('images/thumb_fb3.jpg')}});">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
-            <span class="icon-facebook"></span>
+            <span class="icon-search"></span>
           </div>
         </a>
       </div>
       <div class="col-md-4 col-lg-2 ftco-animate">
         <a href="{{url('images/fb4.jpg')}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{url('images/thumb_fb4.jpg')}});">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
-            <span class="icon-facebook"></span>
+            <span class="icon-search"></span>
           </div>
         </a>
       </div>
       <div class="col-md-4 col-lg-2 ftco-animate">
         <a href="{{url('images/fb5.jpg')}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{url('images/thumb_fb5.jpg')}});">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
-            <span class="icon-facebook"></span>
+            <span class="icon-search"></span>
           </div>
         </a>
       </div>
       <div class="col-md-4 col-lg-2 ftco-animate">
         <a href="{{url('images/fb6.jpg')}}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{url('images/thumb_fb6.jpg')}});">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
-            <span class="icon-facebook"></span>
+            <span class="icon-search"></span>
           </div>
         </a>
       </div>

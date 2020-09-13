@@ -23,6 +23,4 @@ class Admin_controller extends Controller
 
         return view('Backend_Pages.Order_page', compact('orders'));
     } 
-    
-   
 }

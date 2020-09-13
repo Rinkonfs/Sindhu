@@ -108,9 +108,15 @@
             <span>Product</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('crud.index') }}">
-            <i class="fas fa-clipboard-list"></i>
-            <span>Order</span>
+          <a class="nav-link" href="{{ route('category') }}">
+            <i class="fas fa-tag"></i>
+            <span>Category</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('coupon') }}">
+            <i class="fas fa-gift"></i>
+            <span>Promotion</span>
           </a>
         </li>
         <li class="nav-item">

@@ -204,40 +204,112 @@
   position: absolute;
 }
 
-.container-fluid{
-  padding:100px
-}
-#about_photo{
-  height:380px;
-  width:auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-#about_text{
-  transform: translate(-10%, 10%);
-}
-#more {display: none;}
-#more1{display: none;}
-#myBtn{
-  color:#dbcc8f;
-}
-#myBtn:hover{
-  color:black;
-  cursor: pointer;
-}
-#myBtn1{
-  color:#dbcc8f;
-}
-#myBtn1:hover{
-  color:black;
-  cursor: pointer;
+* Our Team
+-------------------------------------------------------*/
+
+.our-team .team-row {
+  margin-left: -40px;
+  margin-right: -40px;
 }
 
+.our-team .team-wrap {
+  padding: 0 40px;
+}
 
+.our-team .container-fluid {
+  padding: 0 50px;
+}
 
+.team-img img {
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  overflow: hidden;
+  width: 100%;
+}
 
+.team-member,
+.team-img {
+  position: relative;
+  overflow: hidden;
+}
 
+.team-title {
+  margin: 30px 0 7px;
+}
 
+.overlay {
+  background-color: rgba(20,20,20,.7);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.team-details {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding: 5%;
+  overflow: hidden;
+  width: 100%;
+  z-index: 2;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.team-details p {
+  color: #fff;
+}
+
+.team-img:hover .team-details {
+  opacity: 1;
+  margin-top: -80px;
+}
+
+.team-img:hover .overlay {
+  opacity: 1;
+}
+
+.socials a {
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  background-color: transparent;
+}
+
+.socials i {
+  line-height: 37px;
+  color: #616161;
+  font-size: 14px;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  text-align: center;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.team-details .socials i {
+	color: #fff;
+}
+
+.socials a:hover i {
+  color: #fff;
+  background-color: #355c7d;
+}
 </style>
 
 </head>

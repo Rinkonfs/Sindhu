@@ -69,5 +69,34 @@ Route::resource('/crud','CrudsController')->middleware('isAdmin')->name('*','cru
 
 
 //COUPON CONTROLLER
-Route::get('/coupon','Coupon\adminCouponController@coupon');
+Route::get('/coupon','Coupon\adminCouponController@coupon')->name('coupon');
+Route::post('/coupon-form','Coupon\adminCouponController@store')->name('coupon.form');
+Route::post('/coupon-user-input','Coupon\adminCouponController@user_store')->name('coupon.userinput');
+
+
+
+//CATEGORY CONTROLLER
+// Route::get('/category','Category\categoryController@category')->name('category');
+
+// Route::get('test',function(){
+//     return App\Models\Category\productCategory::with('parent')->where('cat_p_id',0)->get(); 
+// });
+// Route::get('test2',function(){
+//     return App\Models\Category\productCategory::with('child')->where('id',1)->get(); 
+// });
+Route::post('/categoryForm','Category\categoryController@store')->name('categoryForm');
+Route::get('category','Category\categoryController@index')->name('category');
+Route::get('/delete/{id}','Category\categoryController@destroy');
+
+
+// DELIVERY CONTROLLER
+Route::post('/delivery-form','Delivery\DeliveryChargeController@store')->name('deliverycharge');
+// Route::get('/test','Delivery\DeliveryChargeController@show')->name('test');
+
+
+
+
+
+
+
 

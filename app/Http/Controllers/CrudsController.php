@@ -179,7 +179,7 @@ class CrudsController extends Controller
     {
         $data = Crud::findOrFail($id);
         $data->delete();
-        return redirect ('crud')->with('success','Data successfully deleted!');
+        return redirect ('crud')->with('errors','Data successfully deleted!');
     }
 
     

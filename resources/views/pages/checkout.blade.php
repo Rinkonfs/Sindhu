@@ -17,7 +17,21 @@
 	
 	<section class="ftco-section">
 		<div class="container">
+		@if (\Session::has('error'))
+			<div class="alert alert-danger">
+				<ul>
+					<p>{!! \Session::get('error') !!}</p>
+				</ul>
+			</div>
+		@elseif (\Session::has('success'))	
+		<div class="alert alert-success">
+			<ul>
+				<p>{!! \Session::get('success') !!}</p>
+			</ul>
+		</div>
+		@endif
 		  <div class="row justify-content-center">
+			
 				<div class="col-xl-10 ftco-animate">
 				  <form method="post" action="{{ route('users.orders.create') }}" class="billing-form"  enctype="multipart/form-data">
 					  @csrf
@@ -46,13 +60,11 @@
 											<div class="icon"><span class="ion-ios-arrow-down"></span></div>
 										  <select required name="country" id="" class="form-control">
 											  @if(Auth::user() and Auth::user()->address )<option value="{{ Auth::user()->address->country }}" selected >{{ Auth::user()->address->country }}</option>@endif
-											  <option value="France">France</option>
-											  <option value="Italy">Italy</option>
-											  <option value="Philippines">Philippines</option>
-											  <option value="South">South Korea</option>
-											  <option value="Hongkong">Hongkong</option>
-											  <option value="Japan">Japan</option>
-										  </select>
+											  <option value="Bangladesh">Bangladesh</option>
+											  <option value="India">India</option>
+											  <option value="Nepal">Nepal</option>
+											  <option value="Pakistan">Pakistan</option>
+											 <select>
 									  </div>
 								  </div>
 							  </div>
@@ -118,8 +130,8 @@
 								  </div>
 			  
 							  </div>
-			  
-							  <div class="w-100"></div>
+								
+								<div class="w-100"></div>
 
 								@if(!Auth::user())
 							  <div class="col-md-12">
@@ -129,6 +141,10 @@
 										  <label class="mr-3"><input checked type="radio" name="optradio"> Create an Account? </label>
 										  <label class="mr-3 text-danger"> Already have an account? <a href="{{ route('login') }}">Login</a> </label>
 									  </div>
+									  <div class="radio">
+										<label class="mr-3 text-info"> *To recieve discounts and promotional benefits login into your account or <a href="{{ route('register') }}">Sign Up</a> 
+										
+									</div>
 								  </div>
 			  
 							  </div>
@@ -136,9 +152,6 @@
 			  
 						  </div>
 			
-
-
-
 							<?php $total = 0 ?>
 
 							@foreach(session('cart') as $id => $details)
@@ -151,20 +164,33 @@
 									<h3 class="billing-heading mb-4">Cart Total</h3>
 									<p class="d-flex">
 											  <span>Subtotal</span>
-											  <span>Tk. 0.00</span>
+											  <span>&#2547; {{ $total }}</span>
 										  </p>
 										  <p class="d-flex">
 											  <span>Delivery</span>
-											  <span>Tk. 0.00</span>
+											  <span>&#2547; {{$deliveryCharge ?? '100'}}</span>
+											  {{-- @if(isset($varx))   
+											  <span>&#2547; {{$varx}}</span>
+											  @else
+											  <span>&#2547; 0.00</span>
+											  @endif --}}
 										  </p>
 										  <p class="d-flex">
 											  <span>Discount</span>
-											  <span>Tk. 0.00</span>
+											  @if( session('discount') )  
+											  	<span>- &#2547; {{ session('discount') }}</span>
+											  @else
+											  	<span>&#2547; 0.00</span>
+											  @endif
 										  </p>
 										  <hr>
 										  <p class="d-flex total-price">
 											  <span>Total</span>
-											  <span>Tk. {{ $total }}</span>
+											  @if(session('totalAmount')) 
+											  	<span>&#2547; {{ session('totalAmount') }}</span>
+											  @else
+											  	<span>&#2547; {{ $total }}</span>
+											  @endif
 										  </p>
 										  </div>
 							</div>
@@ -175,29 +201,39 @@
 											  <div class="form-group">
 												  <div class="col-md-12">
 													  <div class="radio">
-														 <label><input type="radio" name="optradio" class="mr-2"> bKash</label>
+														 <label><input type="radio" name="optradio" value ="bKash" class="mr-2"> bKash</label>
 													  </div>
 												  </div>
 											  </div>
 											<div class="form-group">
 												<div class="col-md-12">
 													<div class="radio">
-														<label><input type="radio" name="optradio" class="mr-2"> Cash On Delivery</label>
+														<label><input type="radio" name="optradio" value ="Cash On Delivery" class="mr-2"> Cash On Delivery</label>
 													</div>
 												</div>
 											</div>
 											  <div class="form-group">
 												  <div class="col-md-12">
 						   							  <div class="checkbox">
-														 <label><input type="checkbox" value="" class="mr-2"> I have read and accept the terms and conditions</label>
+														 <label><input name="termsCheckbox" type="checkbox" value="" class="mr-2"> I have read and accept the terms and conditions</label>
 													  </div>
 												  </div>
 											  </div>
-											<button class="btn btn-primary py-3 px-4" type="submit">Place an order</button>
+											<button name="orderPlaceButton" id="submitBtn" class="btn btn-primary py-3 px-4" type="submit">Place an order</button>
 									</div>
 								</div>
 							</div>
 				  </form><!-- END -->
+
+				  @if(Auth::user())
+
+
+					<form method="POST" action="{{route('coupon.userinput')}}" >
+					@csrf
+							<input name="user_coupon_code" type="text" placeholder="Coupon Value" required>
+							<input class="btn-success" type="submit" value="Button" >
+					</form>
+					@endif
 		</div> <!-- .col-md-8 -->
 	  </div>
 	</div>
@@ -264,6 +300,20 @@
 		    });
 		    
 		});
+		// var termsBtn=document.getElementsByName('termsCheckbox');
+		//  var orderBtn= document.getElementsByName('orderPlaceButton');
+
+		function UnlockButton(){
+			if(document.getElementByName("termsCheckbox").checked == true)
+			{
+				document.getElementById("submitBtn").disabled = false;
+			}
+			else{
+				document.getElementById("submitBtn").disabled  = true;
+			}
+			return true;
+		}
+		
 	</script>
     
   </body>

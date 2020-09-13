@@ -114,19 +114,20 @@ class UserOrderController extends Controller
             $order->user_id = Auth::id() ? Auth::id() : $user->id ;
             $order->order_status = "Pending"; // will be dynamic
             $order->payment_status = "Pending"; // will be dynamic
-            $order->payment_method = "None"; // will be dynamic
+            // $order->payment_method = "None"; // will be dynamic
             $order->product_id = json_encode($productId) ;
             $order->product_quantity = json_encode($productQuantity) ;
+            $order->payment_method = $request->optradio;
 
             $order->save();
 
             session()->forget('cart');
 
-            return redirect()->back()->with('success', 'Order has been done successfully!');
+            return view('pages.checkout')->with('success', 'Order has been done successfully!');
             
         }
 
-        return redirect()->back()->with('error', 'No product has been added yet!');
+        return view('pages.checkout')->with('error', 'No product has been added yet!');
     }
 
     

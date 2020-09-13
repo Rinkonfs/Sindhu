@@ -65,11 +65,18 @@
                 <div  class="col-sm-10">    
                     <select type="text" name="category" class="form-control input-lg" required>
                         <option selected disabled>Select Category</option>
-                        <option value="Hand Loom">Hand Loom</option>
-                        <option value="Sharee">Saree</option>
-                        <option value="Sharee">3 Piece</option>
-                        <option value="Sharee">Silk Saree</option>
-                        <option value="Sharee">Taant Saree</option> 
+                        @foreach (App\Models\Category\productCategory::with('child')->where('cat_p_id',0)->get() as $cat_item)    
+                        @if ($cat_item->child->count()>0)
+                            <option value="{{$cat_item->cat_name}}">{{$cat_item->cat_name}}</option>    
+                            @foreach ($cat_item->child as $submenu)
+                              <option value="{{$submenu->cat_name}}"> --{{$submenu->cat_name}}</option>    
+                            @endforeach
+                            
+                        @endif
+                        @if ($cat_item->child->count()==0)
+                           <option value="{{$cat_item->cat_name}}">{{$cat_item->cat_name}}</option>
+                        @endif
+                        @endforeach
                     </select>
                 </div>
             </div>
