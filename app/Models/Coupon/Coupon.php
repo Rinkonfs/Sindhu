@@ -14,8 +14,6 @@ class Coupon extends Model
         'active_status',
         'product_category',
         'amount_exceed',
-        'user_dependent',
-        'user_dependent_validity',
         'create_date'
     ];
     public static function findByCode($coupon_code){

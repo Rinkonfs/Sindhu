@@ -17,7 +17,6 @@ class CreateUserCouponTrackersTable extends Migration
             $table->id();
             $table->unsignedBigInteger('couponID');
             $table->double('amount');
-            $table->boolean('amount_status')->nullable();
             $table->timestamps();
         });
     }

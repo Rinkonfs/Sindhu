@@ -4,119 +4,99 @@
 <!-- Navbar Starts -->
 @include('inc.nav')
 <!-- Navbar Ends -->
-
-
-
-<section class="py-md-5" style="height:600px;">
+<div class="hero-wrap hero-bread" style="background-image: url({{url('images/bg_6.jpg')}});">
     <div class="container">
-
-
-        <h1>DASHBOARD</h1>
-
-        @if (session('success'))
-
-            <div class="alert alert-success" role="alert">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                {{ session('success') }}
-            </div>
-        @endif
-
-
-        <div class="row">
-            <div class="col-xs-8">
-                <div class="list-group" style="border:2px solid red;">
-                    <span class="list-group-item" style="background-color: black;color:#7b7d80;font-weight:700;font-size:18px">
-                        Menu
-                    </span>
-                    <a href="{{ route('users.dashboard') }}" class="list-group-item">
-                        Account Detail
-                    </a>
-                    <a href="{{ route('users.orders.index') }}" class="list-group-item">
-                        Order History
-                    </a>
-                    <a href="#" class="list-group-item">
-                        Support
-                    </a>
-                    <a href="#" class="list-group-item">
-                        Track Order
-                    </a>
-                </div>
-            </div>
-            <div class="col-xs-4 card-body" style="padding: 50px;">
-                <h4>Order Details</h4>
-                <div id="">
-                    <div class="card mb-3">
-                        <div class="card-header">
-                            <i class="fas fa-shopping-bag"> All Products</i>
-                        </div>
-                        {{-- <table class="table table-bordered table-striped"> --}}
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                    <tr>
-                                        <th>Product Name</th>
-                                        <th>Description</th>
-                                        <th>Category</th>
-                                        <th>Price</th>
-                                        <th>Color</th>
-                                        <th>Size</th>
-                                        <th>Image</th>
-                                        <th>Quantity</th>
-                                        <th>Total Price</th>
-                                    </tr>
-                                    </thead>
-                                    <tfoot>
-                                    <tr>
-                                        <th>Product Name</th>
-                                        <th>Description</th>
-                                        <th>Category</th>
-                                        <th>Price</th>
-                                        <th>Color</th>
-                                        <th>Size</th>
-                                        <th>Image</th>
-                                        <th>Quantity</th>
-                                        <th>Total Price</th>
-                                    </tr>
-                                    </tfoot>
-                                    <tbody>
-
-                                    @foreach($products as $product)
-                                        <tr>
-
-                                            <td>{{ $product['product']->productName }}</td>
-                                            <td>{{ $product['product']->description }}</td>
-                                            <td>{{ $product['product']->category }}</td>
-                                            <td>{{ $product['product']->productPrice }}</td>
-                                            <td>{{ $product['product']->productColor }}</td>
-                                            <td>{{ $product['product']->productSize }}</td>
-                                            <td>{{ $product['product']->image }}</td>
-                                            <td>{{ $productsQuantity[$loop->index]->product_quantity }}</td>
-                                            <td>{{ $productsQuantity[$loop->index]->product_quantity * $product['product']->productPrice }}</td>
-                                        </tr>
-                                    @endforeach
-
-                                    <td>{{ $totalCosts }}</td>
-                                    {{-- @endforeach --}}
-                                    </tbody>
-                                </table>
-                                {{-- {!! $data->links() !!} --}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center">
+                <p class="breadcrumbs"><span class="mr-2">Dashboard</span><span style="color:black">> </span><span>View Order</span></p>
+                <h1 class="mb-0 bread">Account Detail</h1>
             </div>
         </div>
     </div>
-</section>
+</div>
+<div class="container-fluid pt-2 ">
+    @if (session('success'))
+        <div class="alert alert-success" role="alert">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            {{ session('success') }}
+        </div>
+    @endif
+    <div class="row" style="padding: 50px;">
+        <div class="col-lg-2 col-sm-12" >
+            <div>
+                <h4 >My Account</h4>
+                <hr>
+                <ul class="list-group">
+                    <li>
+                        <a href="{{ route('users.dashboard') }}" >
+                            Account Details
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('users.orders.index') }}">
+                            Order History
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" > Support </a>
+                    </li>
+                    <li >
+                        <a href="#" > Track Order </a>
+                    </li>
+                <ul>
+            </div>        
+        </div>
+        <div class="col-lg-10 col-sm-12" style="border-left:1px solid #e5e5e5;padding-left:25px;padding-right:25px;">
+            <h4> Order Details </h4>
+            <hr>
+                <table class="table table-dark" >
+                    <thead>
+                    <tr >
+                        <th >Product Name</th>
+                        <th >Category</th>
+                        <th >Price</th>
+                        <th >Color</th>
+                        <th >Size</th>
+                        <th >Quantity</th>
+                        <th >Total Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($products as $product)
+                            <tr>
 
-
-
-
-
-
-
+                                <td>{{ $product['product']->productName }}</td>
+                                {{-- <td>{{ $product['product']->description }}</td> --}}
+                                <td>{{ $product['product']->category }}</td>
+                                <td>&#2547; {{ $product['product']->productPrice }}</td>
+                                <td>{{ $product['product']->productColor }}</td>
+                                <td>{{ $product['product']->productSize }}</td>
+                                {{-- <td>{{ $product['product']->image }}</td> --}}
+                                <td>{{ $productsQuantity[$loop->index]->product_quantity }}</td>
+                                <td>&#2547; {{ $productsQuantity[$loop->index]->product_quantity * $product['product']->productPrice }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                    <thead>
+                        <tr style="background-color: #B2BEB5">
+                            <th></th>
+                            <th></th>
+                            <th> </th>
+                            <th> </th>
+                            <th> </th>
+                            <th> <b><h4>Total</b></h4></th>
+                            <th><h4>&#2547; {{ $totalCosts }}</h4></th>
+                        </tr>
+                        </thead>
+                </table>
+                
+                
+                    
+                    
+                    
+        </div>
+    </div>
+</div>
 <!-- footer Starts-->
 @include('inc/footer')
 <!-- footer Ends-->

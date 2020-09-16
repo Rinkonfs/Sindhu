@@ -9,7 +9,6 @@ class UserCouponTracker extends Model
     protected $fillable =[
         'couponID',
         'amount',
-        'amount_status',
     ];
     
    

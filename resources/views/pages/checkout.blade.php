@@ -175,6 +175,16 @@
 											  <span>&#2547; 0.00</span>
 											  @endif --}}
 										  </p>
+										  <hr>
+										  <p class="d-flex">
+											<span>Subtotal + Delivery</span>
+											<span>&#2547; {{ $total + $deliveryCharge}}</span>
+											{{-- @if(isset($varx))   
+											<span>&#2547; {{$varx}}</span>
+											@else
+											<span>&#2547; 0.00</span>
+											@endif --}}
+										</p>
 										  <p class="d-flex">
 											  <span>Discount</span>
 											  @if( session('discount') )  
@@ -189,7 +199,7 @@
 											  @if(session('totalAmount')) 
 											  	<span>&#2547; {{ session('totalAmount') }}</span>
 											  @else
-											  	<span>&#2547; {{ $total }}</span>
+											  	<span>&#2547; {{ $total + $deliveryCharge}}</span>
 											  @endif
 										  </p>
 										  </div>
@@ -201,21 +211,21 @@
 											  <div class="form-group">
 												  <div class="col-md-12">
 													  <div class="radio">
-														 <label><input type="radio" name="optradio" value ="bKash" class="mr-2"> bKash</label>
+														 <label><input type="radio" name="optradio" value ="bKash" class="mr-2" required> bKash</label>
 													  </div>
 												  </div>
 											  </div>
 											<div class="form-group">
 												<div class="col-md-12">
 													<div class="radio">
-														<label><input type="radio" name="optradio" value ="Cash On Delivery" class="mr-2"> Cash On Delivery</label>
+														<label><input type="radio" name="optradio" value ="Cash On Delivery" class="mr-2" required> Cash On Delivery</label>
 													</div>
 												</div>
 											</div>
 											  <div class="form-group">
 												  <div class="col-md-12">
 						   							  <div class="checkbox">
-														 <label><input name="termsCheckbox" type="checkbox" value="" class="mr-2"> I have read and accept the terms and conditions</label>
+														 <label><input name="termsCheckbox" type="checkbox" value="" class="mr-2" required> I have read and accept the terms and conditions</label>
 													  </div>
 												  </div>
 											  </div>
@@ -224,16 +234,19 @@
 								</div>
 							</div>
 				  </form><!-- END -->
-
-				  @if(Auth::user())
-
-
-					<form method="POST" action="{{route('coupon.userinput')}}" >
-					@csrf
-							<input name="user_coupon_code" type="text" placeholder="Coupon Value" required>
-							<input class="btn-success" type="submit" value="Button" >
-					</form>
-					@endif
+				  
+				<div class="row">	
+				  <div class="col-6">
+						@if(Auth::user())
+							<form  style="width:100%;margin-top:10px;text-align:center;" method="POST" action="{{route('coupon.userinput')}}" >
+							@csrf
+									<input style="border-radius:10px;" name="user_coupon_code" type="text" placeholder="Coupon Value" required>
+									<input class="btn btn-primary" type="submit" value="Add Coupon" >
+							</form>
+							@endif
+					</div>
+				</div>		
+				  
 		</div> <!-- .col-md-8 -->
 	  </div>
 	</div>

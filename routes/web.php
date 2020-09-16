@@ -72,6 +72,7 @@ Route::resource('/crud','CrudsController')->middleware('isAdmin')->name('*','cru
 Route::get('/coupon','Coupon\adminCouponController@coupon')->name('coupon');
 Route::post('/coupon-form','Coupon\adminCouponController@store')->name('coupon.form');
 Route::post('/coupon-user-input','Coupon\adminCouponController@user_store')->name('coupon.userinput');
+Route::get('/coupon-test','Coupon\adminCouponController@test')->name('test');
 
 
 

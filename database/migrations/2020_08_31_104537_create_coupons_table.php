@@ -22,8 +22,6 @@ class CreateCouponsTable extends Migration
             $table->boolean('active_status')->nullable();
             $table->json('product_category')->nullable();
             $table->double('amount_exceed')->nullable();
-            $table->boolean('user_dependent')->nullable();
-            $table->boolean('user_dependent_validity')->nullable();
             $table->timestamps();
         });
     }

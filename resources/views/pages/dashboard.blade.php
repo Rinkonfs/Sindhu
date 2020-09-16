@@ -4,46 +4,52 @@
 <!-- Navbar Starts -->
     @include('inc.nav')
 <!-- Navbar Ends -->
-
-
-
-<section class="py-md-5" style="height:600px;">
+<div class="hero-wrap hero-bread" style="background-image: url({{url('images/bg_6.jpg')}});">
     <div class="container">
-
-
-        <h1>DASHBOARD</h1>
-
-        @if (session('success'))
-
-            <div class="alert alert-success" role="alert">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                {{ session('success') }}
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center">
+                <p class="breadcrumbs"><span class="mr-2">Dashboard</span><span style="color:black">> </span><span>Account Details</span></p>
+                <h1 class="mb-0 bread">Dashboard</h1>
             </div>
-        @endif
+        </div>
+    </div>
+</div>
 
-
-        <div class="row">
-            <div class="col-xs-8">
-                <div class="list-group" style="border:2px solid red;">
-                    <span class="list-group-item" style="background-color: black;color:#7b7d80;font-weight:700;font-size:18px">
-                        Menu
-                    </span>
-                    <a href="{{ route('users.dashboard') }}" class="list-group-item">
-                        Account Detail
-                    </a>
-                    <a href="{{ route('users.orders.index') }}" class="list-group-item">
-                        Order History
-                    </a>
-                    <a href="#" class="list-group-item">
-                        Support 
-                    </a>
-                    <a href="#" class="list-group-item">
-                        Track Order
-                    </a>
+<div class="container-fluid pt-2">
+    @if (session('success'))
+        <div class="alert alert-success" role="alert">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            {{ session('success') }}
+        </div>
+    @endif
+        <div class="row" style="padding: 50px;">
+            <div class="col-lg-2 col-sm-12" >
+                <div>
+                    <h4 >My Account</h4>
+                    <hr>
+                    <ul class="list-group">
+                        <li>
+                            <a href="{{ route('users.dashboard') }}" >
+                                Account Details
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('users.orders.index') }}">
+                                Order History
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" > Support </a>
+                        </li>
+                        <li >
+                            <a href="#" > Track Order </a>
+                        </li>
+                    <ul>
                 </div>        
             </div>
-            <div class="col-xs-4 card-body" style="padding: 50px;">
+            <div class="col-lg-10 col-sm-12" style="border-left:1px solid #e5e5e5;padding-left:25px;padding-right:25px;">
                 <h4>Account Details</h4>
+                <hr>
                 <div id="accountDetail">
                     <form action="{{ route('users.profile.update', Auth::id()) }}" method="post"  enctype="multipart/form-data">
                         @csrf
@@ -102,23 +108,14 @@
                         </div>
                       </form>
                 </div>
-                <div id="accountDetail">
-
-                </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 
+    @include('inc/footer') <!-- Footer -->
 
-
-
-
-
-<!-- footer Starts-->
-    @include('inc/footer')
-<!-- footer Ends-->
 
 <!-- loader -->
     <div id="ftco-loader" class="show fullscreen">

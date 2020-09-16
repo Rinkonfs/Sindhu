@@ -72,6 +72,16 @@
       display:none;
     }
   }
+  .list-group li{
+    list-style-type: none;
+    color:#355c7d !important;
+  }
+  .table-sm td{
+    text-align:center;
+  }
+  .table-dark th{
+    color:#dbcc8f 
+  }
 
   
 /* ----------REGISTER CSS----------- */
