@@ -1,26 +1,39 @@
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <title>sindhu store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="Description" content="Custom Sharee designing module from Sindhu Store">
 	<link rel="icon" href="{{asset('images/sindhu_logo.png')}}">
+	<meta name="csrf-token" content="{{ csrf_token() }}" />
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>	
 	<script type="text/javascript" src="{{asset('js/module_js/tshirtEditor.js')}}"></script>
 	<script type="text/javascript" src="{{asset('js/module_js/jquery.miniColors.min.js')}}"></script>
-	<script type="text/javascript" src="{{asset('js/module_js/fabric.js')}}"></script> 
+	<script type="text/javascript" src="{{asset('js/module_js/fabric.js')}}"></script>
+
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+	</script>
+	
+		
+	{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js "></script>	 --}}
+	<script type="text/javascript" src="{{asset('js/module_js/html2canvas.js')}}"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+	
+	
 	
     
 <!-- OWN STYLE START-->
 	<!-- <link rel="stylesheet" type="text/css" href="bootstrap.css"> -->
 	<script type="text/javascript" src="{{asset('js/module_js/bootstrap.min.js')}}"></script> 
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>	
-	<!-- Canvas to image function -->
-	 <script src="https://hongru.github.io/proj/canvas2image/canvas2image.js"></script>
+	{{-- <script type="text/javascript" src="{{asset('js/module_js/FileSaver.js')}}"></script> --}}
+	 
 
 <!--  OWN STYLE END-->
 
@@ -42,62 +55,32 @@
 	.Engagement{font-family:"Engagement";}
 
 	/*|-------------------------------------------------------------------------------------------------------| 
-	|                                         MEDIA QUERY MOBILE                                            | 
-	|                                                                                                       |
-	|-------------------------------------------------------------------------------------------------------| */
+	|                                         MEDIA QUERY MOBILE              	                              | 
+	|                                                                          	    	                      |
+	|---------------------------------------------------------------------------------------------------------| */
 
 	@media only screen and (max-width: 600px) {
-		#bottom_nav{
-			position: fixed;
-			bottom: 0px;
-			overflow-x:auto;
-			display:flex;
-			width: 100%;
-			height:50px;
-			justify-content: space-between;
-			align-items: center;
-			background-color:black;
-			padding:10px;
-			color:grey;
-		}
-		.shirtDiv{
-		width: 200%;
-		height: 159vh;
-		position: relative;
-		background-color: rgb(255, 255, 255);
-		background: url("{{URL::to('/')}}/images/module_images/bg-cloth.png");
-		/*background-repeat: repeat-x, no-repeat;*/
-		background-blend-mode: multiply;
-		border:2px solid red;
-	} 
+	#bottom_nav{
+		position: fixed;
+		bottom: 0px;
+		overflow-x:auto;
+		display:flex;
+		width: 100%;
+		height:50px;
+		justify-content: space-between;
+		align-items: center;
+		background-color:black;
+		padding:10px;
+		color:grey;
+	}
 	#shirtDiv{
 		width: 350px;
 		height: 550px;
 		position: absolute;
 		background-color: rgb(255, 255, 255);
-		background: url("{{URL::to('/')}}/images/module_images/bg-cloth.png");
+		background: url("{{URL::to('/')}}/images/module_images/sareeBody.png");
 		background-blend-mode: multiply;
-		background-size: 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-	#shirtDiv1{
-		width: 350px;
-		height: 550px;
-		position: absolute;
-		background: url("{{URL::to('/')}}/images/module_images/bg-cloth_fullbody.png");
-		background-blend-mode: multiply;
-		background-size:100%;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-	#shirtDiv1_white{
-		width: 350px;
-		height: 550px;
-		position: absolute;
-		background: url("{{URL::to('/')}}/images/module_images/white.png");
-		background-blend-mode: multiply;
-		background-size:100%;
+		background-size: 110%;
 		background-position: center;
 		background-repeat: no-repeat;
 	}
@@ -106,25 +89,7 @@
 		height: 550px;
 		position: absolute;
 		background-blend-mode: multiply;
-		background-size: 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-	#achol{
-		width: 350px;
-		height: 550px;
-		position: absolute;
-		background-blend-mode: multiply;
-		background-size: 100%;
-		background-position: center;
-		background-repeat:no-repeat;
-	}
-	#parSide{
-		width: 350px;
-		height: 550px;
-		position: absolute;
-		background-blend-mode: multiply;
-		background-size: 100%;
+		background-size: 110%;
 		background-position: center;
 		background-repeat: no-repeat;
 	}
@@ -132,8 +97,8 @@
 		width: 350px;
 		height: 550px;
 		position: absolute;
-		background: url("{{URL::to('/')}}/images/module_images/bg-body.png");
-		background-size: 100%;
+		background: url("{{URL::to('/')}}/images/module_images/wholeBody.png");
+		background-size: 110%;
 		background-position: center;
 		background-repeat: no-repeat;
 	}
@@ -142,9 +107,9 @@
 	}
 	}
 	/*|-------------------------------------------------------------------------------------------------------| 
-	|                                         MEDIA QUERY TABLET                                            | 
-	|                                                                                                       |
-	|-------------------------------------------------------------------------------------------------------| */
+	|                                         MEDIA QUERY TABLET                                    	      | 
+	|                                                                                                   	  |
+	|---------------------------------------------------------------------------------------------------------| */
 	@media only screen and (min-width: 600px) and (max-width: 768px){
 		#bottom_nav{
 			position: fixed;
@@ -159,44 +124,14 @@
 			padding:10px;
 			color:grey;
 		}
-	.shirtDiv{
-		width: 200%;
-		height: 159vh;
-		position: relative;
-		background-color: rgb(255, 255, 255);
-		background: url("{{URL::to('/')}}/images/module_images/bg-cloth.png");
-		/*background-repeat: repeat-x, no-repeat;*/
-		background-blend-mode: multiply;
-		border:2px solid red;
-	} 
 	#shirtDiv{
 		width: 350px;
 		height: 650px;
 		position: absolute;
-		background-color: rgb(255, 255, 255);
-		background: url("{{URL::to('/')}}/images/module_images/bg-cloth.png");
+		/* background-color: rgb(255, 255, 255); */
+		background: url("{{URL::to('/')}}/images/module_images/sareeBody.png");
 		background-blend-mode: multiply;
 		background-size: 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-	#shirtDiv1{
-		width: 350px;
-		height: 650px;
-		position: absolute;
-		background: url("{{URL::to('/')}}/images/module_images/bg-cloth_fullbody.png");
-		background-blend-mode: multiply;
-		background-size:100%;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-	#shirtDiv1_white{
-		width: 350px;
-		height: 650px;
-		position: absolute;
-		background: url("{{URL::to('/')}}/images/module_images/white.png");
-		background-blend-mode: multiply;
-		background-size:100%;
 		background-position: center;
 		background-repeat: no-repeat;
 	}
@@ -209,29 +144,11 @@
 		background-position: center;
 		background-repeat: no-repeat;
 	}
-	#achol{
-		width: 350px;
-		height: 650px;
-		position: absolute;
-		background-blend-mode: multiply;
-		background-size: 100%;
-		background-position: center;
-		background-repeat:no-repeat;
-	}
-	#parSide{
-		width: 350px;
-		height: 650px;
-		position: absolute;
-		background-blend-mode: multiply;
-		background-size: 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
 	#shirtDiv2{
 		width: 350px;
 		height: 650px;
 		position: absolute;
-		background: url("{{URL::to('/')}}/images/module_images/bg-body.png");
+		background: {{URL::to('/')}}/images/module_images/sareeBody.png;
 		background-size: 100%;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -246,102 +163,59 @@
 		#bottom_nav{
 			display:none;
 		}
-		.shirtDiv{
-		width: 200%;
-		height: 159vh;
-		position: relative;
-		background-color: rgb(255, 255, 255);
-		background: url("{{URL::to('/')}}/images/module_images/bg-cloth.png");
-		background-blend-mode: multiply;
-		border:2px solid red;
-			} 
-	#shirtDiv{
-		width: 450px;
-		height: 650px;
-		position: absolute;
-		background-color: rgb(255, 255, 255);
-		background: url("{{URL::to('/')}}/images/module_images/bg-cloth.png");
-		background-blend-mode: multiply;
-		background-size: 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-	#shirtDiv1{
-		width: 450px;
-		height: 650px;
-		position: absolute;
-		background: url("{{URL::to('/')}}/images/module_images/bg-cloth_fullbody.png");
-		background-blend-mode: multiply;
-		background-size:100%;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-	#shirtDiv1_white{
-		width: 450px;
-		height: 650px;
-		position: absolute;
-		background: url("{{URL::to('/')}}/images/module_images/white.png");
-		background-blend-mode: multiply;
-		background-size:100%;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-	#par{
-		width: 450px;
-		height: 650px;
-		position: absolute;
-		background-blend-mode: multiply;
-		background-size: 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-	#achol{
-		width: 450px;
-		height: 650px;
-		position: absolute;
-		background-blend-mode: multiply;
-		background-size: 100%;
-		background-position: center;
-		background-repeat:no-repeat;
-	}
-	#parSide{
-		width: 450px;
-		height: 650px;
-		position: absolute;
-		background-blend-mode: multiply;
-		background-size: 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-	#shirtDiv2{
-		width: 450px;
-		height: 650px;
-		position: absolute;
-		background: url("{{URL::to('/')}}/images/module_images/bg-body.png");
-		background-size: 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-	.top_nav_list_item{
-		list-style-type: none;
-		width:70px;
-		float: left;	
-		margin-top: 15px;
-	}
-	.top_nav_list_item a{
-		font-size:24px;
-		color:#dbcc8f;
-	}
+		#shirtDiv{
+			width: 550px;
+			height: 750px;
+			position: absolute;
+			top:0;
+			background: url("{{URL::to('/')}}/images/module_images/sareeBody.png");
+			background-color: rgb(255, 255, 255);
+			background-blend-mode: multiply;
+			background-size: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		#par{
+			width: 550px;
+			height: 750px;
+			position: absolute;
+			top:0;
+			background-blend-mode: multiply;
+			background-size: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		
+		#shirtDiv2{
+			width: 550px;
+			height: 750px;
+			position: absolute;
+			top:0;
+			background: url("{{URL::to('/')}}/images/module_images/wholeBody.png");
+			background-size: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.top_nav_list_item{
+			list-style-type: none;
+			width:70px;
+			float: left;	
+			margin-top: 15px;
+		}
+		.top_nav_list_item a{
+			font-size:24px;
+			color:#dbcc8f;
+		}
 	}	
 	/*|-------------------------------------------------------------------------------------------------------| 
-	|                                         MEDIA QUERY GLOBAL                                            | 
-	|                                                                                                       |
-	|-------------------------------------------------------------------------------------------------------| */
+	|                                         MEDIA QUERY GLOBAL                                              | 
+	|                                                                                                         |
+	|---------------------------------------------------------------------------------------------------------| */
 
 	/* The sidenav */
 	.sidenav {
 	height: 100%;
-	width: 300px;
+	width: 350px;
 	position: fixed;
 	z-index: 1;
 	top: 0;
@@ -358,10 +232,21 @@
 		display: inline-block;
 		cursor: pointer;
 		overflow: hidden;
-		width: 20px;
-		height: 20px;
-		}
-		.rotate {  
+		width: 30px;
+		height: 30px;
+	}.color-preview:hover {
+		border: 1px solid #CCC;
+		margin: 2px;
+		zoom: 1;
+		vertical-align: top;
+		display: inline-block;
+		cursor: pointer;
+		overflow: hidden;
+		/* animation-name: wobble-horizontal;
+  		animation-duration: 1s;
+		animation-timing-function: ease-in; */
+	}
+	.rotate {  
 		-webkit-transform:rotate(90deg);
 		-moz-transform:rotate(90deg);
 		-o-transform:rotate(90deg);
@@ -404,7 +289,7 @@
 		background-color: #f7f7f9;
 		margin: 10px;
 		overflow:auto;
-		height:50%;
+		height:65%;
 	}
 	#footer_btn{
 		position: relative;
@@ -420,28 +305,23 @@
 		border-color: black;
 	}
 
-	#btn_preview_order{
+	/* #btn_preview_order{
 		position: relative;
-		width: 49%;
+		width: 100%;
 		color: white;
 		border-radius: 6px;
 		background:#1085b5;
-		/* #28a745 */
 		padding:5px; 
 	}
 	#btn_preview_order:hover{
-		
 		background:#55bed8;
-		
-	}
+	} */
 	#close{
 	margin-bottom: 2px;		
 	}
 	label{
 		margin-left: 12px;
 	}
-
-
 	#open_btn{
 		/* border:2px solid #15aeda; */
 		display: block;
@@ -473,9 +353,7 @@
 		color:#dbcc8f;
 	}
 </style>
-
 </head>
-
 
 
 <body>
@@ -483,23 +361,11 @@
 	<div id="mySidenav" class="sidenav">
 		<div id="footer_btn" >
 			<button id="close" onclick="closeNav()" type="button" class="btn btn-danger btn-lg btn-block">Close</button>
-			<input id="btn_preview_save" placeholder="Quantity" type="number" class=""  data-toggle="modal" data-target="#share_prev"/>
-			<input id="btn_preview_order" type="submit" value="Order" class=""  onclick="testScrnShot()" />
+			{{-- <input id="btn_preview_save" placeholder="Quantity" type="number"  data-toggle="modal" data-target="#share_prev"/> --}}
+			<button type="button" class="btn btn-info btn-lg btn-block" data-toggle="modal" data-target="#exampleModalCenter" >Order</button>
+			{{-- <input id="btn_preview_order" type="button" value="Order" /> --}}
 		</div>
-			
-		<!-- THIS IS THE START OF SELECT BUTTON -->
-		<div>
-			<label for="select_place">Select Place:</label>
-			<p>
-				<select id="select_place" class="custom-select-lg">
-					<option value="0" selected >None</option>
-					<option value="1" >Design Par</option>
-				</select>
-				<span class="warning" id="warning_text"></span>				
-			</p>								
-		</div>
-		<!-- THIS IS THE END OF SELECT BUTTON -->
-
+		
 		<!-- THIS IS THE START OF COLOR PALLET -->
 		<div class="well">
 			<label for="color_pallet">Select Your Color:</label>
@@ -530,23 +396,56 @@
 		<!-- THIS IS THE START OF DESIGN PALLET -->
 		<label id="add-text" for="design_pallet">Input Designs:</label>
 		<div class="row" id="design_pallet" >
+			
 			<div class="col-6 ">
-				<img class="img-fluid" id="img-polaroid0" src="{{URL::to('/')}}/images/module_images/none.png" height="150px" width="150px" alt="">
-				<img class="img-fluid" id="img-polaroid2" src="{{URL::to('/')}}/images/module_images/logo2.png" height="150px" width="150px" alt="">
-				<img class="img-fluid" id="img-polaroid4" src="{{URL::to('/')}}/images/module_images/logo4.png" height="150px" width="150px" alt="">
-				<img class="img-fluid" id="img-polaroid6" src="{{URL::to('/')}}/images/module_images/logo6.png" height="150px" width="150px" alt="">
-				<img class="img-fluid" id="img-polaroid8" src="{{URL::to('/')}}/images/module_images/logo8.png" height="150px" width="150px" alt="">
-				<img class="img-fluid" id="img-polaroid10" src="{{URL::to('/')}}/images/module_images/logo10.png" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid0" src="{{URL::to('/')}}/images/module_images/icon/none.png" height="150px" width="150px" alt="none">
+				<img class="img-fluid" id="img-polaroid2" src="{{URL::to('/')}}/images/module_images/icon/logo2.png" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid4" src="{{URL::to('/')}}/images/module_images/icon/logo4.png" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid6" src="{{URL::to('/')}}/images/module_images/icon/logo6.png" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid8" src="{{URL::to('/')}}/images/module_images/icon/logo8.png" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid10" src="{{URL::to('/')}}/images/module_images/icon/logo10.png" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid12" src="{{URL::to('/')}}/images/module_images/icon/logo12.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid14" src="{{URL::to('/')}}/images/module_images/icon/logo14.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid16" src="{{URL::to('/')}}/images/module_images/icon/logo16.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid18" src="{{URL::to('/')}}/images/module_images/icon/logo18.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid20" src="{{URL::to('/')}}/images/module_images/icon/logo20.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid22" src="{{URL::to('/')}}/images/module_images/icon/logo22.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid24" src="{{URL::to('/')}}/images/module_images/icon/logo24.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid26" src="{{URL::to('/')}}/images/module_images/icon/logo26.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid28" src="{{URL::to('/')}}/images/module_images/icon/logo28.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid30" src="{{URL::to('/')}}/images/module_images/icon/logo30.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid32" src="{{URL::to('/')}}/images/module_images/icon/logo32.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid34" src="{{URL::to('/')}}/images/module_images/icon/logo34.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid36" src="{{URL::to('/')}}/images/module_images/icon/logo36.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid38" src="{{URL::to('/')}}/images/module_images/icon/logo38.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid40" src="{{URL::to('/')}}/images/module_images/icon/logo40.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid42" src="{{URL::to('/')}}/images/module_images/icon/logo42.jpg" height="150px" width="150px" alt="">
 			</div>
+			
 			<div class="col-6">
-				<img class="img-fluid" id="img-polaroid1" src="{{URL::to('/')}}/images/module_images/logo1.png" height="150px" width="150px" alt="">
-				<img class="img-fluid" id="img-polaroid3" src="{{URL::to('/')}}/images/module_images/logo3.png" height="150px" width="150px" alt="">
-				<img class="img-fluid" id="img-polaroid5" src="{{URL::to('/')}}/images/module_images/logo5.png" height="150px" width="150px" alt="">
-				<img class="img-fluid" id="img-polaroid7" src="{{URL::to('/')}}/images/module_images/logo7.png" height="150px" width="150px" alt="">
-				<img class="img-fluid" id="img-polaroid9" src="{{URL::to('/')}}/images/module_images/logo9.png" height="150px" width="150px" alt="">
-				<img class="img-fluid" id="img-polaroid11" src="{{URL::to('/')}}/images/module_images/logo11.png" height="150px" width="150px" alt="">
-				
+				<img class="img-fluid" id="img-polaroid1" src="{{URL::to('/')}}/images/module_images/icon/logo1.png" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid3" src="{{URL::to('/')}}/images/module_images/icon/logo3.png" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid5" src="{{URL::to('/')}}/images/module_images/icon/logo5.png" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid7" src="{{URL::to('/')}}/images/module_images/icon/logo7.png" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid9" src="{{URL::to('/')}}/images/module_images/icon/logo9.png" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid11" src="{{URL::to('/')}}/images/module_images/icon/logo11.png" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid13" src="{{URL::to('/')}}/images/module_images/icon/logo13.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid15" src="{{URL::to('/')}}/images/module_images/icon/logo15.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid17" src="{{URL::to('/')}}/images/module_images/icon/logo17.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid19" src="{{URL::to('/')}}/images/module_images/icon/logo19.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid21" src="{{URL::to('/')}}/images/module_images/icon/logo21.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid23" src="{{URL::to('/')}}/images/module_images/icon/logo23.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid25" src="{{URL::to('/')}}/images/module_images/icon/logo25.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid27" src="{{URL::to('/')}}/images/module_images/icon/logo27.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid29" src="{{URL::to('/')}}/images/module_images/icon/logo29.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid31" src="{{URL::to('/')}}/images/module_images/icon/logo31.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid33" src="{{URL::to('/')}}/images/module_images/icon/logo33.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid35" src="{{URL::to('/')}}/images/module_images/icon/logo35.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid37" src="{{URL::to('/')}}/images/module_images/icon/logo37.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid39" src="{{URL::to('/')}}/images/module_images/icon/logo39.jpg" height="150px" width="150px" alt="">
+				<img class="img-fluid" id="img-polaroid41" src="{{URL::to('/')}}/images/module_images/icon/logo41.jpg" height="150px" width="150px" alt="">
 			</div>
+
 		</div>
 		<!-- THIS IS THE END OF DESIGN PALLET -->	
 	</div>
@@ -581,179 +480,382 @@
 						<button id="remove-selected" class="btn" title="Delete selected item"><i class="fas fa-trash" style="height:19px;"></i></button>
 						</div>
 		<!-- REDUNDENT PART ENDS -->
-
-		<div id="sharee">
-			<div  id="shirtDiv"> </div>
-			<div  id="shirtDiv1"> </div>
-			<div  id="shirtDiv1_white"> </div>
-			<div  id="par"> </div>
-			<div  id="achol"> </div>
-			<div  id="parSide"> </div>
-			<div  id="shirtDiv2" > </div>
-	</div>
-	</section>
+		
+		<span class="success" style="color:green; margin-top:10px; margin-bottom: 10px;margin-left:80%"></span>
+		<div class="row justify-content-center">
+			<div id="sareeImage" class="col-lg-6 col-sm-12" style="margin:50px">
+					
+					
+					<img id="shirtDiv"> 
+					<div id="par"><div>
+					<img id="shirtDiv2">
+					
+			</div>
+		</div>
+		
 	<div id="bottom_nav" >
 		<i class="fa fa-home" aria-hidden="true"></i>
 		<i class="fa fa-phone" aria-hidden="true"></i>
 		<i class="fa fa-question-circle" aria-hidden="true"></i>
-
 	</div>
+	
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalCenterTitle">Order Confirmation</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+			
+				<div id="error" class="alert alert-primary" role="alert">
+					
+				  </div>
+			
+			<div class="row" >
+				<div class="col-lg-4 col-sm-12" style="height: 400px;width: auto;">
+					<img  src="{{URL::to('/')}}/images/module_images/wholeBody.png" style="top:0;position: absolute;height:350px ;width:auto;background-size: 100%;" >
+					<div  id="pictureOrderConfirmation2" style="height:350px ;width:auto;background-size: 100%;"></div>
+					<img id="pictureOrderConfirmation"  style="top:0;position: absolute;height:350px ;width:auto;background-size: 100%;">
+				</div>
+				<div class="col-lg-8 col-sm-12">
+					<form  id="ajaxform">
+						<div class="form-group">
+						<input type="text" name="name" class="form-control" placeholder="Name (required)" required>
+						</div>
+						<div class="form-group">
+						<input type="phone" name="mobile" class="form-control" placeholder="Phone (required)" required>
+						</div>
+						<div class="form-group">
+							<input type="number" name="quantity" class="form-control" placeholder="Quantity" required>
+						</div>
+						<div class="form-group">
+						<textarea name="message" cols="30" rows="4" class="form-control" placeholder="Any Message"></textarea>
+						</div>
+						<p class="text-danger" style="font-size:12px ">*All Pictures shown are for illustration purpose only.Actual product may vary due to product enhancement.</p>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  <input id="orderConfirmation_btn"type="submit"  value="Order" class="btn btn-primary">
+		</div>
+		</form>
+	  </div>
+	</div>
+  </div>
+  
 
-	{{-- THis is the custom image --}}
-	{{-- <canvas id="canvasSharee" width="500" height="680" style="border:2px solid red;position: absolute;left:700;" >
-		<div  id="canvasshirtDiv"> </div>
-		<div  id="canvasshirtDiv1"> </div>
-		<div  id="canvasshirtDiv1_white"> </div>
-		<div  id="canvaspar"> </div>
-		<div  id="canvasachol"> </div>
-		<div  id="canvasparSide"> </div>
-		<div  id="canvasshirtDiv2" > </div>
-	</canvas>	
-	<div id="previewImage"></div> --}}
+{{-- MODAL END --}}
 
-	{{-- THis is the custom image END--}}
-
-
-
-
-		
-
+</section>
+	
+	
 	<script>
-		
-		var dataURL;
-		function testScrnShot() {
-			html2canvas(document.getElementById("sharee"), {
-				onrendered: function (canvas) {
-					document.body.appendChild(canvas);            
-					dataURL = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-					dataURL.png;
-					console.log(dataURL);
+	
+		//Custom sidebar on/off STARTS
+			/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+			function openNav() {
+			document.getElementById("mySidenav").style.width = "350px";
+			document.getElementById("main").style.marginLeft = "350px";
+			};
 
-
-				}
-			});
-		}
-		
-		console.log("THIS IS THE TEXT"+dataURL);
-		function check(){
-			if(dataURL!="" || dataURL!=undefined ){
-				window.location.href=dataURL;
-				console.log("INSIDE:"+dataURL);
-			}
-			else{
-				alert("No picture is saved yet");	
-				console.log("INSIDE ELSE:"+dataURL);
-			}
-		}
-		// function to_image(){
-				
-        //         var canvas = document.getElementById("canvasSharee");
-        //         document.getElementById("previewImage").src = canvas.toDataURL("image/png");
-        //         Canvas2Image.saveAsPNG(canvas);
-		// 		console.log("THIS IS THE CONSOL OF IMAGE" + Canvas2Image.saveAsPNG(canvas) );
-
-        // }
-
-
-
-
-		//Custom FUNTION STARTS
-		/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-		function openNav() {
-		document.getElementById("mySidenav").style.width = "300px";
-		document.getElementById("main").style.marginLeft = "300px";
-		}
-
-		/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-		function closeNav() {
-		document.getElementById("mySidenav").style.width = "0";
-		document.getElementById("main").style.marginLeft = "0";
-		}
-		//Custom FUNTION ENDS
-
+			/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+			function closeNav() {
+				console.log("cliCked");
+			document.getElementById("mySidenav").style.width = "0";
+			document.getElementById("main").style.marginLeft = "0";
+			};
+		//Custom sidebar on/off ENDS
+		var color;
+		var design;
 	$(document).ready(function(){
-		
-		
-	$('#select_place').change(function(){ 
-		var selectVar="0";
-		var opt = $("#select_place").val();
-		console.log("second console-log:"+opt);
 
+		$( "#error" ).css("display","none" );
+		$( "p" ).append(design);
+						
+			$( ".color-preview" ).click(function() {
+				color = $( this ).css( "background-color");
+				$( "#pictureOrderConfirmation2" ).css( "background-color", color);
+			});
+			
+			
 
-	if(opt == "1"){
-		
-		$("#img-polaroid0").click(function() {
-				/*$("#shirtDiv").css("background-blend-mode", "darken");*/
-				$("#par").css("background-image", "none");
-				console.log(opt +" :clicked 0" );
-				selectVar="0";
-				
-			});
-		$("#img-polaroid1").click(function() {
-				/*$("#shirtDiv").css("background-blend-mode", "darken");*/
-				$("#par").css("background-image", "url('{{ asset('images/module_images/par-1.png')}}')");
-				console.log(opt +" :clicked 1" );
-				selectVar="1";
-			});
-		$("#img-polaroid2").click(function() {
-				/*$("#shirtDiv").css("background-blend-mode", "darken");*/
-				$("#par").css("background-image", "url('{{ asset('images/module_images/par-2.png')}}')");
-				console.log(opt +" :clicked 2");
-				selectVar="2";
-			});
-		$("#img-polaroid3").click(function() {
-				/*$("#shirtDiv").css("background-blend-mode", "darken");*/
-				$("#par").css("background-image", "url('{{ asset('images/module_images/par-3.png')}}')");
-				console.log(opt +" :clicked 3");
-			});
-		$("#img-polaroid4").click(function() {
-				/*$("#shirtDiv").css("background-blend-mode", "darken");*/
-				$("#par").css("background-image", "url('{{ asset('images/module_images/par-4.png')}}')");
-				console.log(opt +" :clicked 4");
-			});
-		$("#img-polaroid5").click(function() {
-				/*$("#shirtDiv").css("background-blend-mode", "darken");*/
-				$("#par").css("background-image", "url('{{ asset('images/module_images/par-5.png')}}')");
-				console.log(opt +" :clicked 5");
-			});
-		$("#img-polaroid6").click(function() {
-				/*$("#shirtDiv").css("background-blend-mode", "darken");*/
-				$("#par").css("background-image", "url('{{ asset('images/module_images/par-6.png')}}')");
-			});
-		$("#img-polaroid7").click(function() {
-				/*$("#shirtDiv").css("background-blend-mode", "darken");*/
-				$("#par").css("background-image", "url('{{ asset('images/module_images/par-7.png')}}')");
-			});
-		$("#img-polaroid8").click(function() {
-				/*$("#shirtDiv").css("background-blend-mode", "darken");*/
-				$("#par").css("background-image", "url('{{ asset('images/module_images/par-8.png')}}')");
-			});
-		$("#img-polaroid9").click(function() {
-				/*$("#shirtDiv").css("background-blend-mode", "darken");*/
-				$("#par").css("background-image", "url('{{ asset('images/module_images/par-9.png')}}')");
-			});
-		$("#img-polaroid10").click(function() {
-				/*$("#shirtDiv").css("background-blend-mode", "darken");*/
-				$("#par").css("background-image", "url('{{ asset('images/module_images/par-10.png')}}')");
-			});
-		$("#img-polaroid11").click(function() {
-				/*$("#shirtDiv").css("background-blend-mode", "darken");*/
-				$("#par").css("background-image", "url('{{ asset('images/module_images/par-11.png')}}')");
-			});
-	}
-		else if(opt == "2"){
+			$("#img-polaroid0").click(function() {
+					$("#par").css("background-image", "none");
+					$("#pictureOrderConfirmation").attr("src", "");
+				});
+			$("#img-polaroid1").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-1.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-1.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid2").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-2.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-2.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid3").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-3.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-3.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid4").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-4.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-4.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid5").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-5.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-5.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid6").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-6.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-6.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid7").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-7.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-7.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid8").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-8.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-8.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid9").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-9.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-9.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid10").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-10.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-10.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid11").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-11.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-11.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
 
 			
-		}
-		if(opt == "null"){
-			$("#warning_text").text("WARNING");
-		}
-		
+				$("#img-polaroid12").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-12.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-12.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid13").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-13.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-13.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid14").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-14.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-14.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid15").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-15.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-15.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid16").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-16.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-16.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid17").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-17.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-17.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid18").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-18.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-18.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid19").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-19.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-19.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid20").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-20.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-20.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid21").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-21.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-21.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid22").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-22.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-22.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			
+			$("#img-polaroid23").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-23.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-23.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid24").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-24.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-24.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid25").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-25.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-25.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid26").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-26.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-26.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid27").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-27.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-27.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid28").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-28.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-28.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid29").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-29.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-29.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid30").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-30.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-30.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid31").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-31.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-31.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid32").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-32.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-32.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid33").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-33.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-33.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			
+			$("#img-polaroid34").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-34.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-34.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid35").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-35.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-35.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid36").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-36.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-36.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid37").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-37.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-37.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid38").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-38.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-38.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid39").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-39.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-39.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid40").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-40.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-40.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid41").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-41.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-41.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+			$("#img-polaroid42").click(function() {
+					$("#par").css("background-image", "url('{{ asset('images/module_images/par/par-42.png')}}')");
+					$("#pictureOrderConfirmation").attr("src", "{{ asset('images/module_images/par/par-42.png')}}");
+					design=$('#pictureOrderConfirmation').prop('src');
+				});
+	});
 
-	});
+
+	$("#orderConfirmation_btn").click(function(event){
 		
+	  event.preventDefault();
+	  if($("input[name=name]").val()==null || $("input[name=name]").val()=="" || $("input[name=name]").val()==" "){
+		$( "#error" ).css("display","block" );
+		$( "#error" ).empty().append(" Enter Your Name");
+	  }
+	  else if($("input[name=mobile]").val()==null || $("input[name=mobile]").val()=="" || $("input[name=mobile]").val()==" "){
+		$( "#error" ).css("display","block" );
+		$( "#error" ).empty().append(" Enter Your Mobile Number");
+	  }
+	  else if($("input[name=quantity]").val()==null || $("input[name=quantity]").val()=="" || $("input[name=quantity]").val()==" "){
+		$( "#error" ).css("display","block" );
+		$( "#error" ).empty().append(" Enter Your Quantity");
+	  }
+	  else{
+	  			let mobile = $("input[name=mobile]").val();
+				let quantity = $("input[name=quantity]").val();
+				let name = $("input[name=name]").val();
+				let message = $("textarea[name=message]").val();
+				let _token   = $('meta[name="csrf-token"]').attr('content');
+				$.ajax({
+					url: "ajax-request",
+					type:"POST",
+					data:{
+						name:name,
+						mobile:mobile,
+						quantity:quantity,
+						message:message,
+						ajax_color:color,
+						ajax_design:design,
+						_token: _token
+					},
+					success:function(response){
+						console.log(response);
+						if(response) {
+							$('#error').text(response.success).show();
+							setTimeout(function(){
+								$('#error').text(response.success).hide();
+							}, 2000);
+							$("#ajaxform")[0].reset();
+						}
+					},
+				});
+			  
+			}
+			
+	 
 	});
-	
+
 	
 	</script>
 

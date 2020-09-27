@@ -24,6 +24,9 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "^5.13.1"
+        "@fortawesome/fontawesome-free": "^5.13.1",
+        "dom-to-image": "^2.6.0",
+        "file-saver": "^2.0.2",
+        "html2canvas": "^1.0.0-rc.7"
     }
 }

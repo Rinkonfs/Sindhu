@@ -95,6 +95,16 @@ Route::post('/delivery-form','Delivery\DeliveryChargeController@store')->name('d
 // Route::get('/test','Delivery\DeliveryChargeController@show')->name('test');
 
 
+// Route::get('/test', function(){
+//     return view('test');
+// });
+Route::get('/test','Category\categoryController@test');
+Auth::routes(['verify' => true]);
+
+Route::post('ajax-request', 'Order\CustomOrderController@store');
+Route::get('/req', 'Order\CustomOrderController@index');
+
+
 
 
 

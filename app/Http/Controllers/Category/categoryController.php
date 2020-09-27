@@ -18,6 +18,15 @@ class categoryController extends Controller
         $cats = productCategory::all();
 
         return view('Backend_Pages.category',compact('cats'));
+
+        // $cats = productCategory::all();
+        // // return json_encode($cats);
+        
+        // return view('test')->with('leads', $cats);
+        
+        // // return view('test', [
+        // //     'langs' => $cats
+        // // ]);
     }
 
     /**
@@ -94,5 +103,9 @@ class categoryController extends Controller
         $cats = productCategory::findOrFail($id);
         $cats->delete();
         return redirect ('category')->with('success','Data successfully deleted!');
+    }
+    public function test()
+    {
+        return view('test');
     }
 }

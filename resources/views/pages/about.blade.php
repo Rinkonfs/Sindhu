@@ -95,14 +95,13 @@
             <div class="col-md-4 col-sm-6 team-wrap">
               <div class="team-member text-center">
                 <div class="team-img">
-                  <img src="images/SindhuApu.jpeg" alt="" >
+                  <img src="images/SindhuApu.jpeg" alt="Picture of Sindhu Neegar" >
                   <div class="overlay">
-                    <div class="team-details text-center">
+                    <div class="team-details text-justify">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                       ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                       exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in 
-                      voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        As Sindhu's strength comes from the smell of every mother’s Sharee which is not a piece of cloth;
+                        which is an emotion and a 6 yards story.  So we values in Innovation,
+                        Tradition and Beautification and believe in quality, designs and fabrics.
                       </p>
                     </div>
                   </div>
