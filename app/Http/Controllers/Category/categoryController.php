@@ -16,7 +16,7 @@ class categoryController extends Controller
     public function index()
     {
         $cats = productCategory::all();
-
+        // return view('pages.shop',compact('cats'));
         return view('Backend_Pages.category',compact('cats'));
 
         // $cats = productCategory::all();

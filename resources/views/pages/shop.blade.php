@@ -21,19 +21,18 @@
                         @foreach($products as $product)
                             <div class="col-sm-12 col-md-12 col-lg-4 ftco-animate d-flex">
                                 <div class="product d-flex flex-column">
-                                    <a  href="{{ route('users.products.show', $product->id) }}"
+                                    <a  href="{{ route('users.products.show', $product->id)}}"
                                         class="img-prod">
                                             <img    class="img-fluid"
                                                     src="{{url('/images/'.$product->image)}}"
                                                     alt="Sindhu Product Image">
                                             
-                                            <div    class="overlay">
-                                            </div>
+                                            <div  class="overlay"> </div>
                                     </a>
                                     <div class="text py-3 pb-4 px-3">
                                         <div class="d-flex">
                                             <div class="cat">
-                                                <span>Hand Loom</span>
+                                                <span>{{ $product->category}}</span>
                                             </div>
                                             <div class="rating">
                                                 <p class="text-right mb-0">
@@ -132,142 +131,86 @@
 		    	</div>
 
 		    	<div class="col-md-4 col-lg-2">
-		    		<div class="sidebar">
-							<div class="sidebar-box-2">
-								<h2 class="heading">Categories</h2>
-								<div class="fancy-collapse-panel">
-                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                     <div class="panel panel-default">
-                         <div class="panel-heading" role="tab" id="headingOne">
-                             <h4 class="panel-title">
-                                <a  data-toggle="collapse"
-                                    data-parent="#accordion"
-                                    href="#collapseOne"
-                                    aria-expanded="true"
-                                    aria-controls="collapseOne">
-                                        Sharee
-                                </a>
-                             </h4>
-                         </div>
-                         <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                             <div class="panel-body">
-                                 <ul>
-                                 	<li><a href="#">Cotton</a></li>
-                                 	<li><a onclick="notice()" href="#">Halfsilk</a></li>
-                                 </ul>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="panel panel-default">
-                         <div class="panel-heading" role="tab" id="headingTwo">
-                             <h4 class="panel-title">
-                                 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Jewellery</a>
-                             </h4>
-                         </div>
-                         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                             <div class="panel-body">
-                                <ul>
-                                    <li><a onclick="notice()" href="#">Ear ring</a></li>
-                                    <li><a onclick="notice()" href="#">Finger ring</a></li>
-                                    <li><a onclick="notice()" href="#">Neck piece</a></li>
-                                    <li><a onclick="notice()" href="#">Nose pin</a></li>
-                                </ul>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingThree">
-                            <h4 class="panel-title">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Others</a>
-                            </h4>
-                        </div>
-                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                            <div class="panel-body">
-                               <ul>
-                                   <li><a onclick="notice()" href="#">Blouse Piece</a></li>
-                                   <li><a onclick="notice()" href="#">Scarf</a></li>
-                               </ul>
+                    <div class="sidebar">
+                        <div class="sidebar-box-2">
+                            <h2 class="heading">Categories</h2>
+                            <div class="fancy-collapse-panel">
+                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-default">
+                                    @foreach (App\Models\Category\productCategory::with('child')->where('cat_p_id',0)->get() as $cat_item)
+                                        @if ($cat_item->child->count()>=0)
+                                        <div class="panel-heading" role="tab" id="{{$cat_item->id}}">
+                                            <h4 class="panel-title">
+                                                <a  data-toggle="collapse"
+                                                    data-parent="#accordion"
+                                                    href="#{{$cat_item->cat_name}}"
+                                                    aria-expanded="true"
+                                                    aria-controls="{{$cat_item->cat_name}}">
+                                                   {{$cat_item->cat_name}}
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        @foreach ($cat_item->child as $submenu)
+                                        <div id="{{$cat_item->cat_name}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="{{$cat_item->id}}">
+                                            <div class="panel-body">
+                                                <ul><a href="//www.google.com/">{{$submenu->cat_name}}</a></ul>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                        @endif
+                                        {{-- @if ($cat_item->child->count()==0)
+                                        <div class="panel-heading" role="tab" id="{{$cat_item->cat_name}}">
+                                            <h4 class="panel-title">
+                                                <a   href="//www.google.com/">
+                                                    {{$cat_item->cat_name}}
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        
+                                        @endif --}}
+                                    @endforeach  
+                                </div>
+                            </div>
                             </div>
                         </div>
+                        <div class="sidebar-box-2">
+                            <h2 class="heading">Price Range</h2>
+                            <form method="post" class="colorlib-form-2">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="guests">Price from:</label>
+                                        <div class="form-field">
+                                        <i class="icon icon-arrow-down3"></i>
+                                        <select name="people" id="people" class="form-control">
+                                            <option value="#">1</option>
+                                            <option value="#">200</option>
+                                            <option value="#">300</option>
+                                            <option value="#">400</option>
+                                            <option value="#">1000</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="guests">Price to:</label>
+                                        <div class="form-field">
+                                        <i class="icon icon-arrow-down3"></i>
+                                        <select name="people" id="people" class="form-control">
+                                            <option value="#">2000</option>
+                                            <option value="#">4000</option>
+                                            <option value="#">6000</option>
+                                            <option value="#">8000</option>
+                                            <option value="#">10000</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                     {{--<div class="panel panel-default">
-                         <div class="panel-heading" role="tab" id="headingThree">
-                             <h4 class="panel-title">
-                                 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Cloth Bag
-                                 </a>
-                             </h4>
-                         </div>
-                         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                             <div class="panel-body">
-                                <ul>
-                                 	<li><a onclick="notice()" href="#">Coming Soon</a></li>
-                                 	
-                                 </ul>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="panel panel-default">
-                         <div class="panel-heading" role="tab" id="headingFour">
-                             <h4 class="panel-title">
-                                <a  class="collapsed"
-                                    data-toggle="collapse"
-                                    data-parent="#accordion"
-                                    href="#collapseFour"
-                                    aria-expanded="false"
-                                    aria-controls="collapseThree">
-                                        Assessories
-                                 </a>
-                             </h4>
-                         </div>
-                         <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                             <div class="panel-body">
-                                <ul>
-                                 	<li><a onclick="notice()" href="#">Coming Soon</a></li>
-                                 </ul>
-                             </div>
-                         </div>
-                     </div>--}}
-                  </div>
-               </div>
-							</div>
-							<div class="sidebar-box-2">
-								<h2 class="heading">Price Range</h2>
-								<form method="post" class="colorlib-form-2">
-		              <div class="row">
-		                <div class="col-md-12">
-		                  <div class="form-group">
-		                    <label for="guests">Price from:</label>
-		                    <div class="form-field">
-		                      <i class="icon icon-arrow-down3"></i>
-		                      <select name="people" id="people" class="form-control">
-		                        <option value="#">1</option>
-		                        <option value="#">200</option>
-		                        <option value="#">300</option>
-		                        <option value="#">400</option>
-		                        <option value="#">1000</option>
-		                      </select>
-		                    </div>
-		                  </div>
-		                </div>
-		                <div class="col-md-12">
-		                  <div class="form-group">
-		                    <label for="guests">Price to:</label>
-		                    <div class="form-field">
-		                      <i class="icon icon-arrow-down3"></i>
-		                      <select name="people" id="people" class="form-control">
-		                        <option value="#">2000</option>
-		                        <option value="#">4000</option>
-		                        <option value="#">6000</option>
-		                        <option value="#">8000</option>
-		                        <option value="#">10000</option>
-		                      </select>
-		                    </div>
-		                  </div>
-		                </div>
-		              </div>
-		            </form>
-							</div>
-						</div>
     			</div>
     		</div>
     	</div>

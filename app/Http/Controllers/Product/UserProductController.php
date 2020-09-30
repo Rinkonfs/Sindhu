@@ -8,14 +8,20 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Delivery\DeliveryChargeController;
+use App\Models\Category\productCategory;
 
 class UserProductController extends Controller
 {
     public function index()
     {
-        $products = Crud::paginate(6);
-
-        return view('pages.shop', compact('products'));
+        $products = Crud::select('id', 'productName', 'productPrice','image','category')->paginate(6);
+        $cats = productCategory::all();
+       
+        return view('pages.shop', compact('products','cats'));
+    }
+    public function showCategory()
+    {
+       
     }
 
 
