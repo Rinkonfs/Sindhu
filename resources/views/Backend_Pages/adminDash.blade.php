@@ -125,6 +125,12 @@
             <span>Orders</span>
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('customOrder') }}">
+            <i class="fas fa-clipboard-list"></i>
+            <span>Custom Order</span>
+          </a>
+        </li>
         {{-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>

@@ -102,7 +102,7 @@ Route::get('/test','Category\categoryController@test');
 Auth::routes(['verify' => true]);
 
 Route::post('ajax-request', 'Order\CustomOrderController@store');
-Route::get('/req', 'Order\CustomOrderController@index');
+Route::get('customOrder', 'Order\CustomOrderController@show')->name('customOrder');
 
 
 

@@ -837,6 +837,7 @@
 						message:message,
 						ajax_color:color,
 						ajax_design:design,
+						wear_type:"Normal Type",
 						_token: _token
 					},
 					success:function(response){
@@ -852,8 +853,6 @@
 				});
 			  
 			}
-			
-	 
 	});
 
 	
