@@ -58,7 +58,7 @@
                     @endforeach
                 </tbody>
             </table>
-            <button onclick="style1();">THis is the</button>
+            {{-- <button onclick="style1();">THis is the</button> --}}
             {{-- {!! $data->links() !!} --}}
         </div> 
     </div>

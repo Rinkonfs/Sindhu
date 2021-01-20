@@ -27,7 +27,8 @@ class UserOrderController extends Controller
 
 
         $productsId = json_decode($orders[0]->product_id);
-        $productsQuantity = json_decode($orders[0]->product_quantity);
+   
+       $productsQuantity = json_decode($orders[0]->product_quantity);
 
 
         foreach ($productsId as $index => $productId )
@@ -37,8 +38,9 @@ class UserOrderController extends Controller
             $productsQuantityCounter += $productsQuantity[$index]->product_quantity;
             $totalCosts += ( $product->productPrice * $productsQuantity[$index]->product_quantity );
         }
-
-        return view('pages.users-orders-history-index', compact('orders', 'productCounter', 'productsQuantityCounter', 'totalCosts'));
+        
+            return view('pages.users-orders-history-index', compact('orders', 'productCounter', 'productsQuantityCounter', 'totalCosts'));
+            
     }
 
     public function show(Order $order)

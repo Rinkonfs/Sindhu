@@ -29,14 +29,14 @@ class CustomOrderController extends Controller
         $order->message = $request->message;
         $order->wear_type = $request->wear_type;
         $order->save();
-        return response()->json(['success'=>$data]);  //FOR TESTING DATA
+        // return response()->json(['success'=>$data]);  //FOR TESTING DATA
         //  $order->order_status =
-        //  return response()->json(['success'=>"Data Saved"]);
+         return response()->json(['success'=>"Data Saved"]);
     }
     public function show (){
         $order = CustomOrder::all();
         // return view('pages.shop',compact('cats'));
-        return view('Backend_pages/customOrder',compact('order'));
+        return view('Backend_Pages/customOrder',compact('order'));
 
         // return view('Backend_pages/customOrder');
        

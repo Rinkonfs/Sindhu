@@ -31,6 +31,7 @@ class Page_Controller extends Controller
     }
     public function login(){
         return view('admin_pages/login');
+        Redirect::back()->withErrors(['msg', 'The Message']);
     }
     public function customOrder(){
         return view('pages/customOrder');

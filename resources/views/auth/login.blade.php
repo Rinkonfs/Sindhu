@@ -89,6 +89,10 @@ input[type="submit"]:hover,input[type="submit"]:focus {
 
 <body>
   @include('inc.nav')
+  
+  @if($errors->any())
+  <h4>{{$errors->first()}}</h4>
+  @endif
  
   <div id="login-box">
     <form class="right-box" method="POST" action="{{ route('register') }}">
@@ -141,8 +145,8 @@ input[type="submit"]:hover,input[type="submit"]:focus {
        </div>
         <input type="submit"
           value="Login"
-          name="signup-button"
-          placeholder="Sign Up"/>
+          name="signup-button"/>
+
         @if (Route::has('password.request'))
         <a  style="font-size:13px;color:#141a46; font-weight:600;margin-left:20%;" href="{{ route('password.request') }}">
               {{ __('Forgot Your Password?') }}

@@ -46,7 +46,7 @@ Route::put('user-orders/{order}','Order\AdminOrderController@update')->middlewar
 
 //Login and User Dashboard
 Route::get('/signup','Page_Controller@signup');
-Route::get('/login','Page_Controller@login')->name('login');
+Route::post('/login','Page_Controller@login')->name('login');
 Route::get('/dashboard','Page_Controller@dashboard')->name('users.dashboard');
 
 // Backend pages
@@ -95,6 +95,7 @@ Route::post('/delivery-form','Delivery\DeliveryChargeController@store')->name('d
 // Route::get('/test','Delivery\DeliveryChargeController@show')->name('test');
 
 
+
 // Route::get('/test', function(){
 //     return view('test');
 // });
@@ -103,6 +104,13 @@ Auth::routes(['verify' => true]);
 
 Route::post('ajax-request', 'Order\CustomOrderController@store');
 Route::get('customOrder', 'Order\CustomOrderController@show')->name('customOrder');
+
+
+//Website Setting Controller
+// Route::get('user-settings','WebSiteSettings\HomePageController@homepage')->middleware('isAdmin')->name('homepagesettings');
+Route::get('settings','WebSiteSettings\HomePageController@view')->name('settings');
+Route::post('settings','WebSiteSettings\HomePageController@save');
+
 
 
 
