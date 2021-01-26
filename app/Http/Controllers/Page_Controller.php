@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use App\Models\WebsiteSettings\desktopslider;
+use App\Models\WebsiteSettings\mobileslider;
+use App\Models\WebsiteSettings\newarrival;
+use App\Models\WebsiteSettings\newdeal;
 
 
 use Illuminate\Http\Request;
@@ -10,7 +14,12 @@ use Illuminate\Http\Request;
 class Page_Controller extends Controller
 {
     public function index(){
-        return view('home');
+        $cats = desktopslider::all();
+        $mobile_slider = mobileslider::all();
+        $new_arrival_product = newarrival::all();
+        $new_deal= newdeal::all();
+        return view('home', compact('cats','mobile_slider','new_arrival_product','new_deal'));
+        // return view('home');
     }
     public function about(){
         return view('pages/about');

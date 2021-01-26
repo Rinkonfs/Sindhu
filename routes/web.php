@@ -3,6 +3,7 @@
 //Frontend pages
 
 Route::get('/','Page_Controller@index');
+// Route::get('/','WebsiteSettings\HomePageController@show');
 Route::get('/about','Page_Controller@about');
 Route::get('/contact','Page_Controller@contact');
 Route::get('/Custom_Order','Page_Controller@customOrder');
@@ -111,6 +112,21 @@ Route::get('customOrder', 'Order\CustomOrderController@show')->name('customOrder
 Route::get('settings','WebSiteSettings\HomePageController@view')->name('settings');
 Route::post('settings','WebSiteSettings\HomePageController@save');
 
+Route::post('desktopslider','WebSiteSettings\HomePageController@desktopslider');
+Route::delete('desktop_slider_destroy/{id}','WebSiteSettings\HomePageController@desktopSliderDestroy');
+
+Route::post('mobileslider','WebSiteSettings\HomePageController@mobileslider');
+Route::delete('mobile_slider_destroy/{id}','WebSiteSettings\HomePageController@mobileSliderDestroy');
+
+Route::post('newarrival','WebSiteSettings\HomePageController@newarrival');
+Route::delete('newarrival_destroy/{id}','WebSiteSettings\HomePageController@newarrivalDestroy');
+
+Route::post('newdealupdate/{id}','WebSiteSettings\HomePageController@newdealupdate');
+
+
+// Route::post('slider2','WebSiteSettings\HomePageController@slider2');
+// Route::post('slider3','WebSiteSettings\HomePageController@slider3');
+// Route::post('new_deal','WebSiteSettings\HomePageController@newDeal');
 
 
 
