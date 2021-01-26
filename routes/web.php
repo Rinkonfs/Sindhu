@@ -2,7 +2,7 @@
 
 //Frontend pages
 
-Route::get('/','Page_Controller@index');
+Route::get('/','Page_Controller@index')->name('userHome');
 // Route::get('/','WebsiteSettings\HomePageController@show');
 Route::get('/about','Page_Controller@about');
 Route::get('/contact','Page_Controller@contact');
@@ -70,7 +70,7 @@ Route::resource('/crud','CrudsController')->middleware('isAdmin')->name('*','cru
 
 
 //COUPON CONTROLLER
-Route::get('/coupon','Coupon\adminCouponController@coupon')->name('coupon');
+Route::get('/coupon','Coupon\adminCouponController@coupon')->middleware('isAdmin')->name('coupon');
 Route::post('/coupon-form','Coupon\adminCouponController@store')->name('coupon.form');
 Route::post('/coupon-user-input','Coupon\adminCouponController@user_store')->name('coupon.userinput');
 Route::get('/coupon-test','Coupon\adminCouponController@test')->name('test');
@@ -87,7 +87,7 @@ Route::get('/coupon-test','Coupon\adminCouponController@test')->name('test');
 //     return App\Models\Category\productCategory::with('child')->where('id',1)->get(); 
 // });
 Route::post('/categoryForm','Category\categoryController@store')->name('categoryForm');
-Route::get('category','Category\categoryController@index')->name('category');
+Route::get('category','Category\categoryController@index')->middleware('isAdmin')->name('category');
 Route::get('/delete/{id}','Category\categoryController@destroy');
 
 
@@ -104,12 +104,12 @@ Route::get('/test','Category\categoryController@test');
 Auth::routes(['verify' => true]);
 
 Route::post('ajax-request', 'Order\CustomOrderController@store');
-Route::get('customOrder', 'Order\CustomOrderController@show')->name('customOrder');
+Route::get('customOrder', 'Order\CustomOrderController@show')->middleware('isAdmin')->name('customOrder');
 
 
 //Website Setting Controller
 // Route::get('user-settings','WebSiteSettings\HomePageController@homepage')->middleware('isAdmin')->name('homepagesettings');
-Route::get('settings','WebSiteSettings\HomePageController@view')->name('settings');
+Route::get('settings','WebSiteSettings\HomePageController@view')->middleware('isAdmin')->name('settings');
 Route::post('settings','WebSiteSettings\HomePageController@save');
 
 Route::post('desktopslider','WebSiteSettings\HomePageController@desktopslider');
