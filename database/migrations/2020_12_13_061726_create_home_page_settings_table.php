@@ -13,9 +13,29 @@ class CreateHomePageSettingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('home_page_settings', function (Blueprint $table) {
+        Schema::create('desktopsliders', function (Blueprint $table) {
             $table->increments('id');
-            $table->json('filename');
+            $table->String('filename');
+            $table->String('name');
+            $table->timestamps();
+        });
+        Schema::create('mobilesliders', function (Blueprint $table) {
+            $table->increments('id');
+            $table->String('filename');
+            $table->String('name');
+            $table->timestamps();
+        });
+        Schema::create('newarrivals', function (Blueprint $table) {
+            $table->increments('id');
+            $table->String('filename');
+            $table->String('name');
+            $table->String('category');
+            $table->timestamps();
+        });
+        Schema::create('featuredproducts', function (Blueprint $table) {
+            $table->increments('id');
+            $table->String('filename');
+            $table->String('name');
             $table->timestamps();
         });
     }
@@ -27,6 +47,9 @@ class CreateHomePageSettingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('home_page_settings');
+        Schema::dropIfExists('desktopsliders');
+        Schema::dropIfExists('mobilesliders');
+        Schema::dropIfExists('newarrivals');
+        Schema::dropIfExists('featuredproducts');
     }
 }

@@ -19,7 +19,7 @@
             </ul>
         </div>
     @endif --}}
-    <div  class="card mb-3" >
+    <div  class="card mb-3 p-3" >
         <div class="table-responsive">    
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
